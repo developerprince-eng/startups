@@ -19,4 +19,14 @@ class user_model extends CI_Model{
         $query = $this->db->get_where('user', array('uid' => $uid));
         return $query->row_array();
     }
+
+    public function register_user($enc_password){
+        $data = array(
+                'email' => $this->input->post('email'),
+                'username' => $this->input->post('username'),
+                'password' => $enc_password
+        ); 
+
+        return $this->db->insert('user', $data);
+    }
 }

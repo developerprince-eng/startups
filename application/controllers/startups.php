@@ -10,14 +10,16 @@ class startups extends CI_Controller{
 	public function index(){
 		$data['title'] = 'Start ups';
 
-		$data['user'] = $this->user_model->get_user();
-
 		$this->load->view('templates/header');
 		$this->load->view('startups/index');
 		$this->load->view('templates/footer');
 	}
 
 	public function upload(){
+		if(!$this->session->userdata('logged_in')){
+			redirect('user');
+		}
+
 		$data['title'] = 'Upload Startup';
 
 		$this->form_validation->set_rules('name', 'Name', 'required');

@@ -1,6 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
+ * Created by Developer Prince.
  * User: TechVillage Laptop01
  * Date: 21/06/2018
  * Time: 11:07
@@ -10,17 +10,21 @@ class user_model extends CI_Model{
         $this->load->database();
     }
 
-    public function get_user($uid = FALSE){
-        if($uid === FALSE){
-            $query = $this->db->get('user');
-            return $query->result_array();
-        }
+    public function login ($email, $enc_password){
+        
+         $this->db->where('email', $email);
+         $this->db->where('password', $enc_password);
 
-        $query = $this->db->get_where('user', array('uid' => $uid));
-        return $query->row_array();
-    }
+         $result = $this->db->get('user');
 
-    public function register_user($enc_password){
+         if($result->num_rows() == 1){
+             return $result->row(0)->id;
+         }else{
+             return false;
+         }
+    }   
+
+    public function register($enc_password){
         $data = array(
                 'email' => $this->input->post('email'),
                 'username' => $this->input->post('username'),

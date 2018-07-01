@@ -13,14 +13,14 @@
 						Member Register
 					</span>
 
-				<div class="wrap-input100 validate-input" >
+				<div class="wrap-input100 " >
 					<input class="input100" type="text" name="email" placeholder="Email">
 					<span class="focus-input100"></span>
 					<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
 				</div>
-				<div class="wrap-input100 validate-input" >
+				<div class="wrap-input100 " >
 					<input class="input100" type="text" name="username" placeholder="Username">
 					<span class="focus-input100"></span>
 					<span class="symbol-input100">
@@ -28,14 +28,14 @@
 						</span>
 				</div>
 
-				<div class="wrap-input100 validate-input" >
+				<div class="wrap-input100 " >
 					<input class="input100" type="password" name="password" placeholder="Password">
 					<span class="focus-input100"></span>
 					<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 				</div>
-				<div class="wrap-input100 validate-input" >
+				<div class="wrap-input100 " >
 					<input class="input100" type="password" name="password2" placeholder="Confirm Password">
 					<span class="focus-input100"></span>
 					<span class="symbol-input100">

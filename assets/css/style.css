@@ -136,7 +136,7 @@ hr {
 }
 /* Home Style */
 header {
-	background: url(../img/startupzw.jpg) no-repeat bottom right;
+	background: url('../images/startupzw.jpg') no-repeat bottom right;
 	background-size: cover;
 	color: #cfcfcf;
 	position: relative;

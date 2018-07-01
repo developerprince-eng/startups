@@ -29,7 +29,7 @@
 						<div class="form-group">			
 							<div class="wrap-input100 validate-input" >
 								<label>Description</label>
-								<textarea class="input200" type="text" name="description" placeholder="I am a web Servive Startup">
+								<textarea id="editor1" class="input200" type="text" name="description" placeholder="I am a web Servive Startup">
 								</textarea>
 								<span class="focus-input100"></span>
 								<span class="symbol-input100">

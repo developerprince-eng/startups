@@ -23,7 +23,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/modernizr.custom.js"></script>
-
+    <script src="https://cdn.ckeditor.com/ckeditor5/10.1.0/classic/ckeditor.js"></script>
     </head>
     <body>
         <!-- Navigation

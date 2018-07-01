@@ -14,8 +14,11 @@ class startups extends CI_Controller{
 		
 		$data['title'] = 'Start ups';
 
+		$data['startups'] = $this->startup_model->get_startups();
+		
+
 		$this->load->view('templates/header');
-		$this->load->view('startups/index');
+		$this->load->view('startups/index', $data);
 		$this->load->view('templates/footer');
 	}
 
@@ -28,7 +31,7 @@ class startups extends CI_Controller{
 
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('description', 'Description', 'required');
-		$this->form_validation->set_rules('location', 'Location');
+		$this->form_validation->set_rules('brief', 'Brief', 'required');
 
 		if($this->form_validation->run() === FALSE){
 			$this->load->view('templates/login_header');
@@ -40,5 +43,13 @@ class startups extends CI_Controller{
 		}
 
 
+	}
+
+	public function update(){
+		if(!$this->session->userdata('logged_in')){
+			redirect('user');
+		}
+
+		$data["title"] = 'Update Startup';
 	}
 }

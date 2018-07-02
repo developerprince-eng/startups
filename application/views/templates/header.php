@@ -49,6 +49,7 @@
                         <li><a href="<?php echo base_url(); ?>home" class="page-scroll">Home</a></li>
                         <li><a href="#team-section" class="page-scroll">Contributors</a></li>
                         <li><a href="#contact-section" class="page-scroll">Contact</a></li>
+                        <li><a href="<?php echo base_url(); ?>user/update" class="page-scroll">Edit</a></li>
                         <li><a href="<?php echo base_url(); ?>user/logout" class="page-scroll">Logout</a></li>
                         <?php endif ?>
                     </ul>

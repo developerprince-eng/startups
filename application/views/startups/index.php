@@ -49,77 +49,80 @@
 			</div>
 		</form>
 		<!-- Card Workspace -->
-		<div class="portfolio-item">
-			<div class="row">
-				
-				<?php foreach($startups as $startup): ?>
-				<div class="col-md-3 col-sm-6 col-lg-3 card-deco show-case">
-					<div class="portfolio-item isotope-item">
-						<div class="card transition hover-bg">
-							<h2 class="transition str-h2"><?php echo $startup['name']; ?></h2>
-							<p class="startup-description str-text"><small><?php echo $startup['brief'] ?></small></p>
-							<div class="cta-container transition"><a type="" class="cta-name" >Bulawayo</a></div>
-							<div class="cta-container transition"><a href="" class="cta-loc" data-toggle="modal" data-target="" id="readmore-2">ReadMore</a></div>
-							<div class="card_circle transition">
-								<img src=""/>
-							</div>
+		<div class="portfolio-item">	
+			<?php foreach($startups as $startup): ?>
+				<div class="portfolio-item">
+				<!-- Startup Card -->
+					<div class="col-md-3 col-sm-6 col-lg-3 card-deco show-case">
+						<div class="portfolio-item isotope-item" >
+							<div class="card transition hover-bg">
+								<h2 class="transition str-h2"><?php echo $startup['name']; ?></h2>
+								<p class="startup-description str-text"><small><?php echo $startup['brief'];?></small></p>
+								<div class="cta-container transition"><a type="" class="cta-name">Bulawayo</a></div>
+								<div class="cta-container transition"><a href="" class="cta-loc" data-toggle="modal" data-target="#<?php echo $startup['id']; ?>" id="readmore-1">ReadMore</a></div>
+								<div class="card_circle transition">
+									<img src=""/>
+								</div>
 							<div class="clearfix"></div>
+						</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="modal fade" id="" role="dialog">
-					<div class="modal-dialog" style="margin-top: 8%;">
-						<!--  Modal content-->
-						<div class="modal-content model-design">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-								<img class="img-responsive center-block" src="" style="max-width: 20%;">
-							</div>
-							<div class="modal-body">
-								<div class="row startup_description">
-									<div class="col-md-8 col-lg-8 col-xs-8">
-										<h3>Description</h3>
-										<p>
-											<?php echo startup['description']; ?>
-										</p>
-										<div class="row startup_know" style="margin-top: 5%;">
-											<div class="col-md-8 col-lg-8 col-xs-8">
-												<div class="container">
-													<a href="#"><i class="fa fa-facebook"></i></a>
-													<a href="#"><i class="fa fa-twitter"></i></a>
-													<a href="#"><i class="fa fa-linkedin"></i></a>
-												</div>
-											</div>
-											<div class="col-md-4 col-lg-4 col-xs-4">
-												<a>Know More</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4 col-lg-4 col-xs-4">
-										<h3>Location</h3>
-										<p>
-											Cnr Jason Ave & 9th Ave,<br>
-											Bulawayo, Bambanani Centre 2nd Floor
-										</p>
-										<div class="row startup_status">
-											<div class="container">
-												<h3>Status</h3>
-												<p>Active</p>
-											</div>
-										</div>
-									</div>
+				<!-- Modal Start Description (for it's Hard Coded) -->
+				<!-- Please take note these are basic Cards -->
+
+				<!-- Startup Modal -->
+				<div class="modal fade" id="<?php echo $startup['id']; ?>" role="dialog">
+				<div class="modal-dialog" style="margin-top: 8%;">
+					<!-- Startup Modal content-->
+					<div class="modal-content model-design">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<img class="img-responsive center-block" src="" style="max-width: 20%;">
+					</div>
+					<div class="modal-body">
+						<div class="row startup_description">
+						<div class="col-md-8 col-lg-8 col-xs-8">
+							<h3>Description</h3>
+							<p>
+								<?php echo $startup['description']; ?>
+							</p>
+							<div class="row startup_know" style="margin-top: 5%;">
+							<div class="col-md-8 col-lg-8 col-xs-8">
+								<div class="container">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
 								</div>
 							</div>
-							<div class="modal-footer"></div>
+							<div class="col-md-4 col-lg-4 col-xs-4">
+								<a>Know More</a>
+							</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-lg-4 col-xs-4">
+							<h3>Location</h3>
+							<p>
+							Bulawayo
+							</p>
+							<div class="row startup_status">
+							<div class="container">
+								<h3>Status</h3>
+								<p>Beginner</p>
+							</div>
+							</div>
+						</div>
 						</div>
 					</div>
+					<div class="modal-footer"></div>
+					</div>
 				</div>
-				
-				<?php endforeach; ?>
-		
+				</div>
+			<?php endforeach; ?>
+		</div>
 	</div>
-</div>
+
 
 <div class="text-center">
 	<a href="<?php echo base_url(); ?>startups/upload" class="btn btn-default btn-lg page-scroll">Register Startup</a>

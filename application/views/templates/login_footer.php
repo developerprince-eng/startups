@@ -6,6 +6,7 @@
 <script src="<?php echo base_url(); ?>assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
 <script src="<?php echo base_url(); ?>assets/vendor/select2/select2.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/upload/index.js"></script>
 <!--===============================================================================================-->
 <script src="<?php echo base_url(); ?>assets/js/tilt/tilt.jquery.min.js"></script>
 <script >

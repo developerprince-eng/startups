@@ -19,6 +19,7 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/login/css/util.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/login/css/main.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/upload/style.css">
     <!--===============================================================================================-->
     <script src="https://cdn.ckeditor.com/ckeditor5/10.1.0/classic/ckeditor.js"></script>
 

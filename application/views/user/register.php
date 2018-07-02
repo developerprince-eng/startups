@@ -3,7 +3,7 @@
 	<div class="container-login100">
 		<div class="wrap-login100">
 			<div class="login100-pic js-tilt" data-tilt>
-				<img src="<?php echo base_url(); ?>images/login/images/startupzw.png" alt="IMG">
+				<img src="<?php echo base_url(); ?>assets/images/login/images/startupzw.png" alt="IMG">
 			</div>
             <?php echo validation_errors(); ?>
 

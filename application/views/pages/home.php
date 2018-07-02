@@ -90,7 +90,7 @@
         <div class="row">
           <div class="col-md-4 col-sm-6 team">
             <div class="thumbnail"> 
-              <img src="<?php echo base_url('images/contributors/techvillage.png'); ?>" alt="..." class="img-circle team-img">
+              <img src="<?php echo base_url('assets/images/contributors/techvillage.png'); ?>" alt="..." class="img-circle team-img">
               <div class="caption">
                 <a href="https://techvillage.org.zw">
                     <h3>TechVillage</h3>
@@ -101,7 +101,7 @@
           </div>
           <div class="col-md-4 col-sm-6 team">
             <div class="thumbnail"> 
-              <img src="<?php echo base_url('images/contributors/velociti.png'); ?>" alt="..." class="img-circle team-img">
+              <img src="<?php echo base_url('assets/images/contributors/velociti.png'); ?>" alt="..." class="img-circle team-img">
               <div class="caption">
                 <a href="https://velociti.co.zw">
                     <h3>Velociti</h3>
@@ -112,7 +112,7 @@
           </div>
           <div class="col-md-4 col-sm-6 team">
             <div class="thumbnail"> 
-              <img src="<?php echo base_url('images/contributors/shinga-1.png'); ?>" alt="..." class="img-circle team-img">
+              <img src="<?php echo base_url('assets/images/contributors/shinga-1.png'); ?>" alt="..." class="img-circle team-img">
               <div class="caption">
                 <a href="https://shinga.co.zw">
                     <h3>Shinga</h3>
@@ -134,7 +134,7 @@
           </div>
           <div class="row">
             <div class="col-md-6 col-sm-6 col-md-offset-3 team">
-              <div class="thumbnail"> <img src="images/partners/hubvisa.jpg" alt="..." class="img-circle team-img">
+              <div class="thumbnail"> <img src="<?php echo base_url('assets/images/partners/hubvisa.jpg'); ?>" alt="..." class="img-circle team-img">
                 <div class="caption">
                   <h3>HubVisa</h3>
                 </div>

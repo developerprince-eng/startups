@@ -18,6 +18,8 @@ class user extends CI_Controller{
 			$this->load->view('user/index');
 			$this->load->view('templates/login_footer');
 		}else {
+
+			
 			$email = $this->input->post('email');
 			$enc_password = md5($this->input->post('password'));
 
@@ -35,7 +37,7 @@ class user extends CI_Controller{
 				$this->session->set_flashdata('login_successful','Login in Successful');
 				redirect('startups');
 			}else{
-				$this->session->set_flashdata('login_failed','Login in invalid');
+				$this->session->set_flashdata('login_failed','Login in invalid check email & password');
 				redirect('user');
 			}
 

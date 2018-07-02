@@ -4,24 +4,31 @@
     <div class="container-login100">
         <div class="wrap-login100">
             <div class="login100-pic js-tilt" data-tilt>
-                <img src="<?php echo base_url(); ?>images/login/images/startupzw.png" alt="IMG">
+                <img src="<?php echo base_url(); ?>assets/images/login/images/startupzw.png" alt="IMG">
             </div>
-            <?php echo validation_errors(); ?>
             
+            <?php validation_errors(); ?>
 
 			<?php echo form_open('user/login');?>
             <div class="login100-form ">
 					<span class="login100-form-title">
                         Member Login
                     </span>
-                    <div class="conatiner">
+                    <div class="container">
                         <?php if($this->session->flashdata('user_registered')): ?>
-                            <?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_resgistered').'</p>';?>
+                            <?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_registered').'</p>';?>
+                         <?php endif; ?>
+                         <?php if($this->session->flashdata('login_failed')): ?>
+                            <?php echo '<p class="alert alert-danger">'.$this->session->flashdata('login_failed').'</p>';?>
                          <?php endif; ?>
                     </div>
                 <div class="wrap-input100 validate-input">
                     <input class="input100" type="text" name="email" placeholder="JohnDlamini64@email.com">
+                    <?php if( validation_errors() === "The Email field is required"): ?>
+                            <?php echo '<p class="alert alert-success">'.validation_errors().'</p>';?>
+                         <?php endif; ?>
                     <span class="focus-input100"></span>
+                    
                     <span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
@@ -29,6 +36,9 @@
 
                 <div class="wrap-input100 validate-input" >
                     <input class="input100" type="password" name="password" placeholder="Password">
+                    <?php if( validation_errors() === "The Password field is required"): ?>
+                            <?php echo '<p class="alert alert-success">'.validation_errors().'</p>';?>
+                         <?php endif; ?>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>

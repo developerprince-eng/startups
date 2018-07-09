@@ -12,7 +12,54 @@ class startups extends CI_Controller{
 			redirect('user');
 		}
 		
-		
+		/*
+		$url = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=b5f55194d174421ab6ad8bf68d7fcc8b';
+		$response = http_get($url, null, $info);
+		print_r ($response);*/
+
+		$url_g = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=b5f55194d174421ab6ad8bf68d7fcc8b';
+		function CallAPI($method, $url, $data = false)
+		{
+		$curl = curl_init();
+
+		switch ($method)
+			{
+				/*
+				case "GET":
+					curl_setopt($curl, CURLOPT_URL, $url);
+
+					$result = curl_exec($curl);
+					break;*/
+				case "POST":
+					curl_setopt($curl, CURLOPT_POST, 1);
+
+					if ($data)
+						curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+					break;
+				case "PUT":
+					curl_setopt($curl, CURLOPT_PUT, 1);
+					break;
+				default:
+					if ($data)
+						$url = sprintf("%s?%s", $url, http_build_query($data));
+			}
+
+			// Optional Authentication:
+			curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+			curl_setopt($curl, CURLOPT_USERPWD, "username:password");
+
+			curl_setopt($curl, CURLOPT_URL, $url);
+			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+			$result = curl_exec($curl);
+
+			curl_close($curl);
+
+			return $result;
+		}
+
+		$res = CallAPI(NULL, $url_g , false);
+		print_r ($res);
 		$data['title'] = 'Start ups';
 
 		$data['startups'] = $this->startup_model->get_startups();

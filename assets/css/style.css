@@ -47,6 +47,9 @@ a:hover, a:focus {
 	clear: both;
 	height: 0;
 }
+.cs-nav{
+	background: #222;
+}
 .clearfix {
 	display: inline-block;
 }

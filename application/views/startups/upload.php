@@ -39,8 +39,8 @@
 						</div>
 						
 						<div class="container-login100-form-btn">
-							<button  type="other" data-modal="#modal2" class="login200-form-btn modal__trigger" >UPLOAD LOGO</button>
-							<button  type="other" data-modal="#modal" class="login200-form-btn modal__trigger">UPLOAD COVER</button>
+							<button  type="other" data-modal="#modal2" class="login200-form-btn modal__trigger" >UPLOAD COVER</button>
+							<button  type="other" data-modal="#modal" class="login200-form-btn modal__trigger">UPLOAD LOGO</button>
 							<button  type="submit" class="login300-form-btn" >REGISTER</button>	
 						</div>	
 

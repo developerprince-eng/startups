@@ -36,24 +36,47 @@
                     <a class="navbar-brand" href="index.html"><i class="fa fa-sun-o"></i>Startupzw<strong></strong></a> </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
+                <?php if(!$this->session->userdata('logged_in')): ?>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <?php if(!$this->session->userdata('logged_in')): ?>
                         <li><a href="#home" class="page-scroll">Home</a></li>
                         <li><a href="#about-section" class="page-scroll">About</a></li>
                         <li><a href="#works-section" class="page-scroll">Startups</a></li>
                         <li><a href="#team-section" class="page-scroll">Contributors</a></li>
                         <li><a href="#contact-section" class="page-scroll">Contact</a></li>
-                        <?php endif ?>
-                        <?php if($this->session->userdata('logged_in')): ?>
+                        
+                        <!--
+                        
                         <li><a href="<?php echo base_url(); ?>home" class="page-scroll">Home</a></li>
                         <li><a href="#team-section" class="page-scroll">Contributors</a></li>
                         <li><a href="#contact-section" class="page-scroll">Contact</a></li>
                         <li><a href="<?php echo base_url(); ?>user/update" class="page-scroll">Edit</a></li>
                         <li><a href="<?php echo base_url(); ?>user/logout" class="page-scroll">Logout</a></li>
-                        <?php endif ?>
+                        -->
                     </ul>
                 </div>
+                <?php endif ?>
+                <?php if($this->session->userdata('logged_in')): ?>
+                <div class="collapse navbar-collapse cs-nav" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                    <!--
+                        <li><a href="#home" class="page-scroll">Home</a></li>
+                        <li><a href="#about-section" class="page-scroll">About</a></li>
+                        <li><a href="#works-section" class="page-scroll">Startups</a></li>
+                        <li><a href="#team-section" class="page-scroll">Contributors</a></li>
+                        <li><a href="#contact-section" class="page-scroll">Contact</a></li>
+                         -->
+                        
+                        
+                        <li><a href="<?php echo base_url(); ?>home" class="page-scroll">Home</a></li>
+                        <li><a href="#team-section" class="page-scroll">Contributors</a></li>
+                        <li><a href="#contact-section" class="page-scroll">Contact</a></li>
+                        <li><a href="<?php echo base_url(); ?>user/update" class="page-scroll">Edit</a></li>
+                        <li><a href="<?php echo base_url(); ?>user/logout" class="page-scroll">Logout</a></li>
+                       
+                    </ul>
+                </div>
+                <?php endif ?>
                 <!-- /.navbar-collapse -->
             </div>
             <!-- /.container-fluid -->

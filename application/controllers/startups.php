@@ -59,7 +59,8 @@ class startups extends CI_Controller{
 		}
 
 		$res = CallAPI(NULL, $url_g , false);
-		print_r ($res);
+		$object = json_decode($res);
+		print_r ($object);
 		$data['title'] = 'Start ups';
 
 		$data['startups'] = $this->startup_model->get_startups();

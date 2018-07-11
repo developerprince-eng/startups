@@ -24,12 +24,7 @@ class startups extends CI_Controller{
 
 		switch ($method)
 			{
-				/*
-				case "GET":
-					curl_setopt($curl, CURLOPT_URL, $url);
-
-					$result = curl_exec($curl);
-					break;*/
+				
 				case "POST":
 					curl_setopt($curl, CURLOPT_POST, 1);
 
@@ -71,6 +66,7 @@ class startups extends CI_Controller{
 		$this->load->view('templates/footer');
 	}
 
+
 	public function upload(){
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');
@@ -78,9 +74,9 @@ class startups extends CI_Controller{
 
 		$data['title'] = 'Upload Startup';
 
-		$this->form_validation->set_rules('name', 'Name', 'required');
-		$this->form_validation->set_rules('description', 'Description', 'required');
-		$this->form_validation->set_rules('brief', 'Brief', 'required');
+		$this->form_validation->set_rules('name', 'Name', '');
+		$this->form_validation->set_rules('description', 'Description', '');
+		$this->form_validation->set_rules('brief', 'Brief', '');
 
 		if($this->form_validation->run() === FALSE){
 			$this->load->view('templates/login_header');
@@ -103,6 +99,24 @@ class startups extends CI_Controller{
 	}
 
 	public function upload_logo(){
+
+		$config = array(
+			'upload_path' => 'upload',
+			'allowed_types' => 'jpg|jpeg|png|bmp',
+			'max_size' => 2000,
+			'max_width' => 400,
+			'max_height' => 400,
+			'filename' => url_title($this->input->post('file'))
+		);
+		$this->load->library('upload', $config);
+
+		if($this->upload->do_upload('file')){
+			$this->db->insert('startup', array(
+				'startup_img' => $this->upload->startup_img
+			));
+			$this->session->set_flashdata('msg', 'Success!!!');
+		}
+		/*
 		$config['upload_path']		= '././assets/images/logos';
 		$config['allowed_type']		= 'jpg|png';
 		$config['max_size']			= 2000;
@@ -119,7 +133,7 @@ class startups extends CI_Controller{
 			$data = array('upload_data' => $this->upload_logo->data());
 
 			redirect('startups/upload', $data);
-		}
+		}*/
 
 	}
 

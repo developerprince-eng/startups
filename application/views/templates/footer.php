@@ -2,7 +2,7 @@
   <div id="footer">
       <div class="container">
         <div class="fnav">
-          <p>Copyright &copy; startups.co.zw. Designed by RitDev</p>
+          <p>Copyright &copy; startups.co.zw. Designed by Kubaki</p>
         </div>
       </div>
     </div>

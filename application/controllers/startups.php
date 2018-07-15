@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 /**
- * Created by PhpStorm.
+ * Created by Developer Prince
  * User: TechVillage Laptop01
  * Date: 21/06/2018
  * Time: 11:55
@@ -12,10 +12,7 @@ class Startups extends CI_Controller{
 			redirect('user');
 		}
 		
-		/*
-		$url = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=b5f55194d174421ab6ad8bf68d7fcc8b';
-		$response = http_get($url, null, $info);
-		print_r ($response);*/
+		
 
 		$url_g = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=b5f55194d174421ab6ad8bf68d7fcc8b';
 		function CallAPI($method, $url, $data = false)
@@ -71,32 +68,9 @@ class Startups extends CI_Controller{
 		$this->load->view('templates/footer');
 	}
 
-/*
-	public function upload(){
-		if(!$this->session->userdata('logged_in')){
-			redirect('user');
-		}
-
-		$data['title'] = 'Upload Startup';
-
-		$this->form_validation->set_rules('name', 'Name', '');
-		$this->form_validation->set_rules('description', 'Description', '');
-		$this->form_validation->set_rules('brief', 'Brief', '');
-
-		if($this->form_validation->run() === FALSE){
-			$this->load->view('templates/login_header');
-			$this->load->view('startups/upload', $data);
-			$this->load->view('templates/login_footer');
-		}else {
-			$this->startup_model->create_startup();
-			redirect('startups');
-		}
-
-
-	}
-*/
 
 /*** START OF UPLOAD STARTUP CODE */
+// Edited by Developer Martin 
  //upload input and image files
  public function upload(){
 	$this->load->helper(array('form', 'file', 'url'));

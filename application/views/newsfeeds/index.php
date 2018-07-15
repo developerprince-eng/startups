@@ -29,6 +29,9 @@
         <li>
             <a href="#">Contact</a>
         </li>
+        <li>
+            <a href="<?php echo base_url(); ?>">Home</a>
+        </li>
     </ul>
 </div>
 <div class=""><a href="#menu-toggle" class=" " id="menu-toggle"><i class="fa fa-arrow-right fa-1x"> </i></a></div>
@@ -64,6 +67,10 @@
             </div>
               
             <div class="col-lg-6">
+            <div class="chart-deco">
+                <canvas  id="myChart" width="600" height="400"></canvas>
+            </div>
+            <canvas  id="us-sector-realtime" width="600" height="400"></canvas>
             </div>
                 
         </div>

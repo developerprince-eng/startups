@@ -4,31 +4,7 @@
 <div id="works-section" class="work-flexi">
 	<div class="container"> <!-- Container -->
 		<div class="section-title text-center center">
-		<!--
-		<?php foreach ($articles['articles'] as $article): ?>
-			<div class="flexslider"
-                <div class="row slide" style="padding-top: 100px;">
-                    <div class="well media">
-                        <div class="media-left"><img class="media-objects" src="<?php echo $article['urlToImage']?>"/></div>
-                        <div class="media-body">
-                            <h1><?php echo $article['title']?></h1>
-                            
-                            <div class="separator"></div>
-                            <p><?php echo $article['description']?></p>
-                            <div class="author">
-                            <h2><?php echo $article['author']?></h2>
-                            </div>
-                        </div>
-                        
-                        <h5 class="real-date"></h5>
-                        <h6 class="real-date-01"><?php echo $article['publishedAt']?></h6>
-                        
-                        <div class="fab"><a href="<?php echo $article['url']?>"><i class="fa fa-arrow-down fa-1x"> </i></a></div>
-                        
-                    </div>
-                </div>
-		<?php endforeach; ?>
-		-->
+		
 			<h2>Our Startups</h2>
 			<hr>
 
@@ -150,7 +126,7 @@
 
 
 <div class="text-center">
-	<a href="<?php echo base_url(); ?>startups/upload" class="btn btn-default btn-lg page-scroll">Register Startup</a>
+	<a href="<?php echo base_url(); ?>startups/upload" class="btn" style="border-radius: 25px;border-color: #337ab7;margin: auto;background: #FFFFFF;display: -webkit-box; display: -webkit-flex;  display: -moz-box; display: -ms-flexbox; display: flex;justify-content: center; align-items: center; width: 10%; -webkit-transition: all 0.4s; -o-transition: all 0.4s;  -moz-transition: all 0.4s; transition: all 0.4s;">Register Startup</a>
 </div>
 
 <!-- Contact Section -->

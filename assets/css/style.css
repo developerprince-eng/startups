@@ -643,3 +643,24 @@ label {
 	margin-right: 0px;
 	transition: 1s
 }
+.cont-cus-form-btn {
+	border-radius: 25px;
+	border-color: #337ab7;
+    background: #FFFFFF;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .cus-form-btn:hover {
+    background: #333333;
+  }

@@ -121,7 +121,10 @@ class Startups extends CI_Controller{
 			'error_name' => 'Please fill all input fields'
 		);
 
+		$this->load->view('templates/login_header');
 		$this->load->view('startups/upload', $error);
+		$this->load->view('templates/login_footer');
+		
 	}elseif ($this->form_validation->run()==true and empty($_FILES['userfile']['name'][0])) {
 		# code...
 		$error = array(
@@ -129,7 +132,9 @@ class Startups extends CI_Controller{
 			'error_name' => ''
 		);
 
+		$this->load->view('templates/login_header');
 		$this->load->view('startups/upload', $error);
+		$this->load->view('templates/login_footer');
 	}elseif ($this->form_validation->run()==false and !empty($_FILES['userfile']['name'][0])) {
 		# code...
 		!$this->upload->data();
@@ -137,7 +142,10 @@ class Startups extends CI_Controller{
 			'error_image' => '',
 			'error_name' => 'Please fill all input fields'
 		);
+
+		$this->load->view('templates/login_header');
 		$this->load->view('startups/upload', $error);
+		$this->load->view('templates/login_footer');
 	}elseif ($this->form_validation->run()==true and !empty($_FILES['userfile']['name'][0])) {
 		# code...
 		$this->upload->do_upload();

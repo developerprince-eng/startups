@@ -1,12 +1,12 @@
 <?php
-
+defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Created by PhpStorm.
  * User: TechVillage Laptop01
  * Date: 21/06/2018
  * Time: 11:55
  */
-class startups extends CI_Controller{
+class Startups extends CI_Controller{
 	public function index(){
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');

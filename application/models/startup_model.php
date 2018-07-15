@@ -10,7 +10,11 @@ class startup_model extends CI_Model{
 	public function __construct(){
 		$this->load->database();
 	}
-
+/** INSERT STARTUP */
+public function insert($startup){
+	$this->db->insert('startup', $startup);
+}
+/** END INSERT STARTUP CODE */
 	public function get_startups($sid = FALSE){
 		if ($sid === FALSE) {
 			$this->db->order_by('id', 'DESC');

@@ -4,7 +4,7 @@
 			<!--echo validation_errors(); 
 			 echo $this->session->flashdata('msg');-->
 				
-				<?php echo form_open_multipart('Uploadcontroller/upload');?>
+				<?php echo form_open_multipart('Startups/upload');?>
 					<div class="login200-form">
 						<span class="login100-form-title"><b>Register Startup</b><br>
 						</span>

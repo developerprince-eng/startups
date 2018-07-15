@@ -39,6 +39,18 @@ a:hover, a:focus {
 	text-decoration: none;
 	color: #222;
 }
+.card-feeds{
+	padding-bottom: 200px;
+	border-radius: 20px;
+	position: relative;
+	height: 250px;
+	width: 600px;
+	margin: auto;
+	background-color: #FFF;
+	-webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+  }
 .clearfix:after {
 	visibility: hidden;
 	display: block;
@@ -206,7 +218,7 @@ header p {
 /* Gallery Section 
 ==============================*/
 #works-section {
-	padding: 120px 0;
+	padding: 0 0;
 	background-color: #f6f6f6;
 }
 .categories {

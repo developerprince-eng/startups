@@ -59,7 +59,12 @@
                         Username / Password?
                     </a>
                 </div>
-
+                <div class="text-center ">
+                    <a class="txt2" href="<?php echo base_url(); ?>">
+                       <h3>Go Back Home</h3>
+                        <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                    </a>
+                </div>
                 <div class="text-center p-t-136">
                     <a class="txt2" href="<?php echo base_url(); ?>user/register">
                         Create your Account

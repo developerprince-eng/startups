@@ -53,9 +53,14 @@ class Startups extends CI_Controller{
 			return $result;
 		}
 
-		$res = CallAPI(NULL, $url_g , false);
-		$object = json_decode($res);
-		print_r ($object);
+		$url_g = 'https://newsapi.org/v2/top-headlines?sources=the-economist&apiKey=b5f55194d174421ab6ad8bf68d7fcc8b';
+		
+		$response_1 = file_get_contents($url_g);
+		
+		$articles = json_decode($response_1, true);
+
+		$data['articles'] = $articles;
+
 		$data['title'] = 'Start ups';
 
 		$data['startups'] = $this->startup_model->get_startups();

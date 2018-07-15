@@ -18,11 +18,14 @@
     <!-- Stylesheet
         ================================================== -->
     <link rel="stylesheet" type="text/css"  href="<?php echo base_url(); ?>assets/css/style.css">
+    
     <link rel="stylesheet" type="text/css"  href="<?php echo base_url(); ?>assets/css/card.css">
+    <link rel="stylesheet" type="text/css"  href="<?php echo base_url(); ?>assets/css/simple-sidebar.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/prettyPhoto.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
- 
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
     <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/modernizr.custom.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/10.1.0/classic/ckeditor.js"></script>
     </head>
@@ -70,7 +73,8 @@
                         
                         
                         <li><a href="<?php echo base_url(); ?>home" class="page-scroll">Home</a></li>
-                        <li><a href="#team-section" class="page-scroll">Contributors</a></li>
+                        <li><a href="<?php echo base_url(); ?>newsfeeds" class="page-scroll">NewsFeeds</a></li>
+                        <li><a href="<?php echo base_url(); ?>startups" class="page-scroll">Startup</a></li>
                         <li><a href="#contact-section" class="page-scroll">Contact</a></li>
                         <li><a href="<?php echo base_url(); ?>user/update" class="page-scroll">Edit</a></li>
                         <li><a href="<?php echo base_url(); ?>user/logout" class="page-scroll">Logout</a></li>

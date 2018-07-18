@@ -79,7 +79,7 @@ class Startups extends CI_Controller{
 	$this->form_validation->set_rules('brief', 'Brief', 'required');
 	$this->form_validation->set_rules('description', 'Description', 'required');
 	$config_image = array(
-		'upload_path' => '././assets/images/startupsS/logos',
+		'upload_path' => '././assets/images/startups/logos',
 		'allowed_types' => 'jpg|jpeg|png|bmp',
 		'max_size' => 1024,
 		'max_width' => 1024,

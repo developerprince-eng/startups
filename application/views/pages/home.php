@@ -1,23 +1,8 @@
-
-    <!-- Header 
-    <header class="text-center" id="home">
-      <div class="intro-text overlay-head">
-        <h1>Home of start-ups in Zimbabwe</h1>
-        <p style="margin-top: 3%;">Discover Zimbabwe's most innovative + inventive products, projects & start-ups</p>
-<<<<<<< HEAD
-        <a href="<?php echo base_url(); ?>user" class="btn btn-default btn-lg page-scroll">Login or Register</a>
-      </div>
-    </header>
-  -->
-    <!-- About Section 
-    <div id="about-section">-->
     <!-- Header -->
     <header class="text-center" id="home">
       <div class="intro-text overlay-head">
         <h1>Home of start-ups in Zimbabwe</h1>
         <p style="margin-top: 3%;">Discover Zimbabwe's most innovative + inventive products, projects & start-ups</p>
-=======
->>>>>>> df4ccbca618ba62187b1ea3867f19e79115ecdad
         <?php if(!$this->session->userdata('logged_in')): ?>
         <a href="<?php echo base_url(); ?>user" style="border-radius: 25px;border-color: #337ab7;margin: auto;background: #FFFFFF;display: -webkit-box; display: -webkit-flex;  display: -moz-box; display: -ms-flexbox; display: flex;justify-content: center; align-items: center; width: 10%; -webkit-transition: all 0.4s; -o-transition: all 0.4s;  -moz-transition: all 0.4s; transition: all 0.4s;" >Login or Register</a>
         <?php endif ?>

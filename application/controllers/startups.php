@@ -52,7 +52,7 @@ class Startups extends CI_Controller{
 
 		$url_g = 'https://newsapi.org/v2/top-headlines?sources=the-economist&apiKey=b5f55194d174421ab6ad8bf68d7fcc8b';
 		
-		$response_1 = file_get_contents($url_g);
+		$response_1 = CallAPI(null, $url_g, false);
 		
 		$articles = json_decode($response_1, true);
 
@@ -79,7 +79,7 @@ class Startups extends CI_Controller{
 	$this->form_validation->set_rules('brief', 'Brief', 'required');
 	$this->form_validation->set_rules('description', 'Description', 'required');
 	$config_image = array(
-		'upload_path' => './image',
+		'upload_path' => '././assets/images/startupsS/logos',
 		'allowed_types' => 'jpg|jpeg|png|bmp',
 		'max_size' => 1024,
 		'max_width' => 1024,
@@ -97,7 +97,7 @@ class Startups extends CI_Controller{
 
 		$this->load->view('templates/login_header');
 		$this->load->view('startups/upload', $error);
-		$this->load->view('templates/login_footer');
+		$this->load->view('templates/hub_startup_footer');
 		
 	}elseif ($this->form_validation->run()==true and empty($_FILES['userfile']['name'][0])) {
 		# code...
@@ -108,7 +108,7 @@ class Startups extends CI_Controller{
 
 		$this->load->view('templates/login_header');
 		$this->load->view('startups/upload', $error);
-		$this->load->view('templates/login_footer');
+		$this->load->view('templates/hub_startup_footer');
 	}elseif ($this->form_validation->run()==false and !empty($_FILES['userfile']['name'][0])) {
 		# code...
 		!$this->upload->data();
@@ -119,7 +119,7 @@ class Startups extends CI_Controller{
 
 		$this->load->view('templates/login_header');
 		$this->load->view('startups/upload', $error);
-		$this->load->view('templates/login_footer');
+		$this->load->view('templates/hub_startup_footer');
 	}elseif ($this->form_validation->run()==true and !empty($_FILES['userfile']['name'][0])) {
 		# code...
 		$this->upload->do_upload();
@@ -165,7 +165,8 @@ public function image_resize($path, $file){
 			redirect('user');
 		}
 
-		$data["title"] = 'Update Startup';
+        $data["title"] = 'Update Startup';
+        
 	}
 
 	public function upload_logo(){
@@ -186,24 +187,6 @@ public function image_resize($path, $file){
 			));
 			$this->session->set_flashdata('msg', 'Success!!!');
 		}
-		/*
-		$config['upload_path']		= '././assets/images/logos';
-		$config['allowed_type']		= 'jpg|png';
-		$config['max_size']			= 2000;
-		$config['max_width']		= 400;
-		$config['max_height']		= 400;
-
-		$this->load->library('upload', $config);
-
-		if(!$this->startups->upload_logo('userfile')){
-			$error = array('error' => $this->upload_logo->display_errors());
-
-			$this->load->view('startups/upload', $error);
-		}else{
-			$data = array('upload_data' => $this->upload_logo->data());
-
-			redirect('startups/upload', $data);
-		}*/
 
 	}
 

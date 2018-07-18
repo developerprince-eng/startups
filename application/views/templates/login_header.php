@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/login/css/util.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/login/css/main.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/upload/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700|Montserrat:400,700|Poppins" rel="stylesheet">
     <!--===============================================================================================-->
     <script src="https://cdn.ckeditor.com/ckeditor5/10.1.0/classic/ckeditor.js"></script>
 

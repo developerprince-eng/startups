@@ -3,6 +3,7 @@ body, html {
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: #777;
+	overflow: hidden;
 }
 h1 {
 }
@@ -663,4 +664,7 @@ label {
   
   .cus-form-btn:hover {
     background: #333333;
+  }
+  .container-fluid{
+	  margin-top: 40px;
   }

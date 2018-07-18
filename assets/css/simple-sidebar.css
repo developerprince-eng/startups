@@ -30,7 +30,7 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #000;
+    background: #2364aa;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -44,7 +44,9 @@
 #page-content-wrapper {
     width: 100%;
     position: absolute;
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 40px;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -71,7 +73,7 @@
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999999;
+    color: #fff;
 }
 
 .sidebar-nav li a:hover {
@@ -126,4 +128,7 @@
         position: relative;
         margin-right: 0;
     }
+}
+.cus-nav{
+    background: #81a4cd;
 }

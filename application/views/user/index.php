@@ -11,7 +11,7 @@
 
 			<?php echo form_open('user/login');?>
             <div class="login100-form ">
-					<span class="login100-form-title">
+					<span class="login100-form-title" style="font-family: 'Montserrat', sans-serif;">
                         Member Login
                     </span>
                     <div class="container">
@@ -23,7 +23,7 @@
                          <?php endif; ?>
                     </div>
                 <div class="wrap-input100 validate-input">
-                    <input class="input100" type="text" name="email" placeholder="JohnDlamini64@email.com">
+                    <input class="input100" type="text" name="email" placeholder="JohnDlamini64@email.com" style="font-family: 'Comfortaa', cursive;">
                     <?php if( validation_errors() === "The Email field is required"): ?>
                             <?php echo '<p class="alert alert-success">'.validation_errors().'</p>';?>
                          <?php endif; ?>
@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" >
-                    <input class="input100" type="password" name="password" placeholder="Password">
+                    <input class="input100" type="password" name="password" placeholder="Password" style="font-family: 'Comfortaa', cursive;">
                     <?php if( validation_errors() === "The Password field is required"): ?>
                             <?php echo '<p class="alert alert-success">'.validation_errors().'</p>';?>
                          <?php endif; ?>
@@ -52,21 +52,21 @@
                 </div>
 
                 <div class="text-center p-t-12">
-						<span class="txt1">
+						<span class="txt1" style="font-family: 'Poppins', sans-serif;">
                             Forgot
 						</span>
-                    <a class="txt2" href="#">
+                    <a class="txt2" href="#" style="font-family: 'Poppins', sans-serif;">
                         Username / Password?
                     </a>
                 </div>
                 <div class="text-center ">
                     <a class="txt2" href="<?php echo base_url(); ?>">
-                       <h3>Go Back Home</h3>
+                       <h3 style="font-family: 'Poppins', sans-serif;">Go Back Home</h3>
                         <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                     </a>
                 </div>
                 <div class="text-center p-t-136">
-                    <a class="txt2" href="<?php echo base_url(); ?>user/register">
+                    <a class="txt2" href="<?php echo base_url(); ?>user/register" style="font-family: 'Poppins', sans-serif;">
                         Create your Account
                         <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                     </a>

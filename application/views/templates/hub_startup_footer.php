@@ -14,7 +14,13 @@
         scale: 1.1
     })
 </script>
-
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor1' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 <!--===============================================================================================-->
 <script src="<?php echo base_url(); ?>assets/js/login/js/main.js"></script>
 

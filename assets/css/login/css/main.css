@@ -1,29 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Montserrat|Poppins');
 
-
-
-/*//////////////////////////////////////////////////////////////////
-[ FONT ]*/
-
-@font-face {
-  font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
-}
-
-@font-face {
-  font-family: Montserrat-Bold;
-  src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
-}
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
@@ -36,7 +13,7 @@
 
 body, html {
 	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 /*---------------------------------------------*/
@@ -67,7 +44,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-	font-family: Poppins-Regular;
+	font-family: 'Poppins', sans-serif;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -134,14 +111,14 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
-  font-family: Poppins-Regular;
+    font-family: 'Poppins', sans-serif;
   font-size: 13px;
   line-height: 1.5;
   color: #999999;
 }
 
 .txt2 {
-  font-family: Poppins-Regular;
+    font-family: 'Poppins', sans-serif;
   font-size: 13px;
   line-height: 1.5;
   color: #666666;
@@ -225,7 +202,7 @@ iframe {
 }
 
 .login200-form-title {
-  font-family: Poppins-Bold;
+  font-family: 'Comfortaa', cursive;
   font-size: 24px;
   color: #333333;
   line-height: 1.2;
@@ -246,7 +223,7 @@ iframe {
 }
 
 .input100 {
-  font-family: Poppins-Medium;
+  font-family: 'Comfortaa', cursive;
   font-size: 15px;
   line-height: 1.5;
   color: #666666;
@@ -260,7 +237,7 @@ iframe {
 }
 
 .input200 {
-  font-family: Poppins-Medium;
+  font-family: 'Comfortaa', cursive;
   font-size: 15px;
   line-height: 1.5;
   color: #666666;
@@ -352,7 +329,7 @@ iframe {
 }
 
 .login100-form-btn {
-  font-family: Montserrat-Bold;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   line-height: 1.5;
   color: #01BAEF;
@@ -394,7 +371,7 @@ iframe {
 }
 
 .login200-form-btn {
-  font-family: Montserrat-Bold;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   line-height: 1.5;
   color: #FBFBFF;
@@ -436,7 +413,7 @@ iframe {
 }
 
 .login300-form-btn {
-  font-family: Montserrat-Bold;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   line-height: 1.5;
   color: #01BAEF;
@@ -539,7 +516,7 @@ iframe {
   right: 8px;
   pointer-events: none;
 
-  font-family: Poppins-Medium;
+  font-family: 'Poppins', sans-serif;
   color: #c80000;
   font-size: 13px;
   line-height: 1.4;

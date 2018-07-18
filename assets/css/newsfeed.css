@@ -5,16 +5,27 @@
 /* The card */
 
 .card {
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   border-radius: 20px;
   position: relative;
   height: 250px;
   width: 600px;
   margin: auto;
   background-color: #FFF;
-  -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+}
+.chart-deco{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 20px;
+  position: relative;
+  margin-top: 20px;
+  background-color: #FFF;
+  -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
 }
 
 /* Image on the left side */
@@ -22,7 +33,7 @@
   float: left;
   position: relative;
   left: 30px;
-  top: -30px;
+  top: 20px;
   height: 120px;
   width: 200px;
   -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
@@ -125,18 +136,17 @@ p {
 .fab {
   position: absolute;
   right: 50px;
-  bottom: -20px;
+  bottom: 20px;
   box-sizing: border-box;
   padding-top: 18px;
   background-color: #1875D0;
-  width: 40px;
+  width: 100px;
   height: 40px;
   color: white;
   text-align: center;
-  border-radius: 50%;
-  -webkit-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
 }
 .fab-01{
   position: absolute;
@@ -148,8 +158,10 @@ p {
   height: 40px;
   color: white;
   text-align: center;
-  border-radius: 50%;
   -webkit-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+}
+.news-feed-canvas{
+    padding-top: 200px ;
 }

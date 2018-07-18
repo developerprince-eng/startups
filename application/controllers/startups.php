@@ -147,8 +147,8 @@ public function image_resize($path, $file){
 		'source_image' => $path,
 		'create_thumb' => TRUE,
 		'maintain_ratio' => TRUE,
-		'width' => 75,
-		'height' => 50,
+		'width' => 400,
+		'height' => 400,
 		'new_image' => './image/thumb/'.$file
 	);
 

@@ -1,5 +1,5 @@
 
-    <!-- Header -->
+    <!-- Header 
     <header class="text-center" id="home">
       <div class="intro-text overlay-head">
         <h1>Home of start-ups in Zimbabwe</h1>
@@ -7,9 +7,9 @@
         <a href="<?php echo base_url(); ?>user" class="btn btn-default btn-lg page-scroll">Login or Register</a>
       </div>
     </header>
-
-    <!-- About Section -->
-    <div id="about-section">
+  -->
+    <!-- About Section 
+    <div id="about-section">-->
     <!-- Header -->
     <header class="text-center" id="home">
       <div class="intro-text overlay-head">

@@ -70,9 +70,9 @@ ini_set("allow_url_fopen", 1);
 
 		
 
-		$this->load->view('templates/newsfeeds_header');
+		$this->load->view('templates/dashboard_header');
 		$this->load->view('dashboard/index', $data);
-		$this->load->view('templates/newsfeeds_footer');
+		$this->load->view('templates/dashboard_footer');
        
 		
 	}

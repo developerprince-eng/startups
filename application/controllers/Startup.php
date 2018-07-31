@@ -63,9 +63,7 @@ class Startup extends CI_Controller{
 		$data['startups'] = $this->startup_model->get_startups();
 		
 
-		$this->load->view('templates/header');
 		$this->load->view('startups/index', $data);
-		$this->load->view('templates/footer');
 	}
 
 

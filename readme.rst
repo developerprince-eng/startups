@@ -1,5 +1,5 @@
 ################
-Statups Platform
+Startups Platform
 ################
 
 Startups is a platform Desgined to enlist all Startups accross Zimbabwe and

@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Date: 21/06/2018
  * Time: 11:55
  */
-class Startups extends CI_Controller{
+class Startup extends CI_Controller{
 	public function index(){
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');

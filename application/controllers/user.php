@@ -5,7 +5,7 @@
  * Date: 21/06/2018
  * Time: 09:03
  */
-class user extends CI_Controller{
+class User extends CI_Controller{
 	
 	public function login(){
 		$data['title'] = 'Login';

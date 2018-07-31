@@ -6,7 +6,7 @@
  * Time: 23:39
  */ 
 ini_set("allow_url_fopen", 1);
- class newsfeeds extends CI_Controller{
+ class dashboard extends CI_Controller{
 	public function index(){
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');

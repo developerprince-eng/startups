@@ -15,7 +15,7 @@ class user extends CI_Controller{
 
 		if($this->form_validation->run() === FALSE){
 			$this->load->view('templates/login_header');
-			$this->load->view('user/index');
+			$this->load->view('users/index');
 			$this->load->view('templates/login_footer');
 		}else {
 
@@ -65,7 +65,7 @@ class user extends CI_Controller{
 
 		if($this->form_validation->run() === FALSE){
 			$this->load->view('templates/login_header');
-			$this->load->view('user/register');
+			$this->load->view('users/register');
 			$this->load->view('templates/login_footer');
 		}else{
 			//Encrpyt password with MD5 standards

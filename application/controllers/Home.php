@@ -6,10 +6,8 @@
             }
 
             $data['title'] = ucfirst($page);
-
-            $this->load->view('templates/header');
+  
             $this->load->view('home/'.$page, $data);
-            $this->load->view('templates/footer');
         }
     }
  ?>

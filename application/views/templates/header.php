@@ -2,7 +2,7 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Startup</title>
+    <title><?php echo $data['title'] ?></title>
     <meta name="description" content="">
     <meta name="author" content=""><html>
     <head>
@@ -136,31 +136,14 @@
                         <li><a href="#about-section" class="page-scroll">About</a></li>
                         <li><a href="#works-section" class="page-scroll">Startups</a></li>
                         <li><a href="#team-section" class="page-scroll">Contributors</a></li>
-                        <li><a href="#contact-section" class="page-scroll">Contact</a></li>
-                        
-                        <!--
-                        
-                        <li><a href="<?php echo base_url(); ?>home" class="page-scroll">Home</a></li>
-                        <li><a href="#team-section" class="page-scroll">Contributors</a></li>
-                        <li><a href="#contact-section" class="page-scroll">Contact</a></li>
-                        <li><a href="<?php echo base_url(); ?>user/update" class="page-scroll">Edit</a></li>
-                        <li><a href="<?php echo base_url(); ?>user/logout" class="page-scroll">Logout</a></li>
-                        -->
+                        <li><a href="#contact-section" class="page-scroll">Contact</a></li>   
                     </ul>
                 </div>
                 <?php endif ?>
                 <?php if($this->session->userdata('logged_in')): ?>
                 <div class="collapse navbar-collapse cs-nav" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                    <!--
-                        <li><a href="#home" class="page-scroll">Home</a></li>
-                        <li><a href="#about-section" class="page-scroll">About</a></li>
-                        <li><a href="#works-section" class="page-scroll">Startups</a></li>
-                        <li><a href="#team-section" class="page-scroll">Contributors</a></li>
-                        <li><a href="#contact-section" class="page-scroll">Contact</a></li>
-                         -->
-                        
-                        
+                   
                         <li><a href="<?php echo base_url(); ?>home" class="page-scroll">Home</a></li>
                         <li><a href="<?php echo base_url(); ?>newsfeeds" class="page-scroll">NewsFeeds</a></li>
                         <li><a href="<?php echo base_url(); ?>startups" class="page-scroll">Startup</a></li>

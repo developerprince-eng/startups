@@ -11,14 +11,14 @@
     <title>Startups</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url() ?>landing/assets/landing/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/landing/assets/landing/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="<?php echo base_url() ?>landing/assets/landing/css/grayscale.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/landing/assets/landing/css/grayscale.min.css" rel="stylesheet">
 
   </head>
 
@@ -54,7 +54,7 @@
         <div class="mx-auto text-center">
           <h1 class="mx-auto my-0 text-uppercase">Startupszw</h1>
           <h2 class="text-white-50 mx-auto mt-2 mb-5">Discover Zimbabwe's most innovative + inventive products, projects & startups</h2>
-          <a href="#about" class="btn btn-primary js-scroll-trigger" style="border-radius: 50px; background: #9053c7;
+          <a href="#about" class="btn btn-primary js-scroll-trigger" style="border-radius: 5px; background: #9053c7;
     background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
     background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
     background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) ">View Startups</a>
@@ -74,7 +74,7 @@
         <!-- Project One Row -->
         <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
           <div class="col-lg-6">
-            <img class="img-fluid" src="assets/landing/img/group-photo.jpg" alt="">
+            <img class="img-fluid" src="<?php echo base_url() ?>assets/landing/assets/landing/img/group-photo.jpg" alt="">
           </div>
           <div class="col-lg-6">
             <div class="bg-black text-center h-100 project">
@@ -92,7 +92,7 @@
         <!-- Project Two Row -->
         <div class="row justify-content-center no-gutters">
           <div class="col-lg-6">
-            <img class="img-fluid" src="assets/landing/img/Off-to-Masvingo-via-Gweru-3-1024x682.jpg" alt="">
+            <img class="img-fluid" src="<?php echo base_url() ?>assets/landing/assets/landing/img/Off-to-Masvingo-via-Gweru-3-1024x682.jpg" alt="">
           </div>
           <div class="col-lg-6 order-lg-first">
             <div class="bg-black text-center h-100 project">
@@ -122,7 +122,7 @@
 		<div class="row">
           <div class="col-md-4 col-sm-6 team">
             <div class="thumbnail"> 
-              <img src="assets/landing/img/contributors/techvillage.png" alt="..."  style="width: 150px;
+              <img src="<?php echo base_url() ?>assets/landing/assets/landing/img/contributors/techvillage.png" alt="..."  style="width: 150px;
 	height: 150px;
 	border: 4px solid transparent;
 	transition: all 0.5s;">
@@ -136,7 +136,7 @@
           </div>
           <div class="col-md-4 col-sm-6 team">
             <div class="thumbnail"> 
-              <img src="assets/landing/img/contributors/velociti.png" alt="..."  style="width: 150px;
+              <img src="<?php echo base_url() ?>assets/landing/assets/landing/img/contributors/velociti.png" alt="..."  style="width: 150px;
 	height: 150px;
 	border: 4px solid transparent;
 	transition: all 0.5s;">
@@ -150,7 +150,7 @@
           </div>
           <div class="col-md-4 col-sm-6 team">
             <div class="thumbnail"> 
-              <img src="assets/landing/img/contributors/shinga-1.png" alt="..."  style="width: 150px;
+              <img src="<?php echo base_url() ?>assets/landing/assets/landing/img/contributors/shinga-1.png" alt="..."  style="width: 150px;
 	height: 150px;
 	border: 4px solid transparent;
 	transition: all 0.5s;">
@@ -168,7 +168,7 @@
      	<h2 class="text-black mb-4 text-center">Meet Our Partners</h2>
      	<div class="row align-content-center">
             <div class="mx-auto text-center">
-            	<div class="thumbnail"> <img src="assets/landing/img/partners/hubvisa.jpg" alt="..." style="width: 180px;
+            	<div class="thumbnail"> <img src="<?php echo base_url() ?>assets/landing/assets/landing/img/partners/hubvisa.jpg" alt="..." style="width: 180px;
 	height: 150px;
 	border: 4px solid transparent;
 	transition: all 0.5s;">
@@ -176,7 +176,7 @@
                   <h3>HubVisa</h3>
                 </div>
               </div>
-              <a href="http://demo.hubvisa.co.zw" class="btn btn-default btn-lg page-scroll" style="border-radius: 50px; background: #9053c7;
+              <a href="http://demo.hubvisa.co.zw" class="btn btn-default btn-lg page-scroll" style="border-radius: 5px; background: #9053c7;
     background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
     background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
     background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) ">Join HubVisa</a>
@@ -196,7 +196,7 @@
 
             <form class="form-inline d-flex">
               <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
-              <button type="submit" class="btn btn-primary mx-auto" style="border-radius: 50px; background: #9053c7;
+              <button type="submit" class="btn btn-primary mx-auto" style="border-radius: 5px; background: #9053c7;
     background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
     background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
     background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) ">Subscribe</button>
@@ -272,15 +272,15 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="<?php echo base_url() ?>landing/assets/landing/vendor/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url() ?>landing/assets/landing/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/landing/assets/landing/vendor/jquery/jquery.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/landing/assets/landing/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="<?php echo base_url() ?>landing/assets/landing/vendor/font-awesome/js/all.js"></script>
-    <script src="<?php echo base_url() ?>landing/assets/landing/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/landing/assets/landing/vendor/font-awesome/js/all.js"></script>
+    <script src="<?php echo base_url() ?>assets/landing/assets/landing/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="<?php echo base_url() ?>landing/assets/landing/js/grayscale.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/landing/assets/landing/js/grayscale.min.js"></script>
 
   </body>
 

@@ -16,6 +16,7 @@
     <link href="<?php echo base_url() ?>assets/landing/assets/landing/css/card.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
@@ -63,13 +64,12 @@
     </nav>
 
     <!-- Header -->
-    <header class="masthead">
+    <header class="masthead" style="height: 25%;">
       <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
-				  <img class="img-fluid" src="<?php echo base_url() ?>assets/images/startupszw-long.png" alt="">
+				  <img class="img-fluid" src="<?php echo base_url() ?>assets/images/startupszw-long.png" alt="" style="margin-top: 25%;">
           <!--<h1 class="mx-auto my-0 text-uppercase">Startupszw</h1>-->
-          <h2 class="text-white-50 mx-auto mt-2 mb-5">Discover Zimbabwe's most innovative + inventive products, projects & startups</h2>
-          
+          <!-- <h2 class="text-white-50 mx-auto mt-2 mb-5">Discover Zimbabwe's most innovative + inventive products, projects & startups</h2> -->
         </div>
       </div>
     </header>
@@ -79,77 +79,56 @@
      <div class="col-lg-12 mx-auto text-center">
      	<h2 class="text-black mb-4 text-center">Startups in Zimbabwe</h2>
      	<div class="portfolio-item">
-     		<div class="row">
+			 	<div class="container">
+				  <div class="row">
 		        <?php foreach ($startups as $startup): ?>
             <!-- Startup Card -->
-            <div class="col-md-3 col-sm-6 col-lg-3 card-deco show-case">
+            <div class="col-md-3 col-sm-6 col-lg-3 card-deco show-case" style="padding-bottom: 5%;">
               <div class="portfolio-item isotope-item" >
                 <div class="card transition hover-bg">
                     <h2 class="transition str-h2"><?php echo $startup['name'] ?></h2>
                       <p class="startup-description str-text"><small><?php echo $startup['brief'] ?></small></p>
                       <div class="cta-container transition" style="margin-left: -25%;"><a href="" class="cta-loc" data-toggle="modal" data-target="#<?php echo $startup['id'] ?>" id="readmore-1" >ReadMore</a></div>
                       <div class="card_circle transition">
-                          <img src="img/startups/Kristel.jpg"/>
+                          <img src="<?php echo base_url()?>assets/images/startups/<?php echo $startup['startup_img']?>"/>
                       </div>
                       <div class="clearfix"></div>
                   </div>
                 </div>
             </div>
-     		</div>
-     		<!-- Startup Modal -->
-			<div class="modal fade" id="<?php echo $startup['id'] ?>" role="dialog">
-		    <div class="modal-dialog" style="margin-top: 8%;">
-				<!-- Startup Modal content-->
-				<div class="modal-content model-design">
-				  <div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<img class="img-responsive center-block" src="<?php echo base_url() ?>img/startups/<?php echo $startup['img_url'] ?>" style="max-width: 20%;">
-				</div>
-				<div class="modal-body">
-					<div class="row startup_description">
-					<div class="col-md-8 col-lg-8 col-xs-8">
-						<h3>Description</h3>
-						<p>
-						<?php echo $startup['description'] ?>
-						</p>
-						<div class="row startup_know" style="margin-top: 5%;">
-						<div class="col-md-8 col-lg-8 col-xs-8">
-							<div class="container">
-							<a href="#"><i class="fab fa-facebook"></i></a>
-							<a href="#"><i class="fab fa-twitter"></i></a>
-							<a href="#"><i class="fab fa-linkedin"></i></a>
-							</div>
-							<div class="container">
-							<a href="#"><i class="fas fa-file-invoice-dollar"></i></a>
-							<a href="#"><i class="fas fa-file"></i></a>
+						<!-- Startup Modal -->
+						<div class="modal fade" id="<?php echo $startup['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo $startup['id'] ?>" aria-hidden="true" style="border-radius: 25px;">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<img src="<?php echo base_url()?>assets/images/startups/<?php echo $startup['startup_img']?>" alt="" style="width: 25%;">
+										<h5 class="modal-title" id="<?php echo $startup['id'] ?>"><?php echo $startup['name'] ?></h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<p><?php echo $startup['description'] ?></p>
+									</div>
+									<div class="modal-footer">
+										<div class="container">
+											<a href="#"><i class="fab fa-facebook-square"></i></a>
+											<a href="#"><i class="fab fa-linkedin"></i></a>
+											<a href="#"><i class="fab fa-twitter-square"></i></a>
+											<a href="#"><i class="fas fa-file-powerpoint"></i></a>
+											<a href="#"><i class="fas fa-file-invoice-dollar"></i></a>
+											<a href="#"><i class="fab fa-internet-explorer"></i></a>
+										</div>	
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="col-md-4 col-lg-4 col-xs-4">
-							<a href="#about" class="btn btn-primary js-scroll-trigger" style="border-radius: 5px; background: #9053c7;
-									background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
-									background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
-									background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) ">Know More</a>
-						</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-lg-4 col-xs-4">
-						<h3>Location</h3>
-						<p>
-							Bulawayo
-						</p>
-						<div class="row startup_status">
-						<div class="container">
-							<h3>Status</h3>
-							<p>Active</p>
-						</div>
-						</div>
-					</div>
-					</div>
-				</div>
-				<div class="modal-footer"></div>
-				</div>
-			</div>
-			<?php endforeach; ?>
+						<?php endforeach; ?>
+     			</div>
+				</div>		
+     	
+     	
+			
 			</div>
 			</div>
 		

@@ -1,15 +1,13 @@
 <?php
-    class home extends CI_Controller{
-        public function view($home = 'home'){
-            if(!file_exists(APPPATH. 'views/homes/'.$home. '.php')){
+    class Home extends CI_Controller{
+        public function view($page = 'home'){
+            if(!file_exists(APPPATH. 'views/home/'.$page. '.php')){
                 show_404();
             }
 
-            $data['title'] = ucfirst($home);
-
-            $this->load->view('templates/header');
-            $this->load->view('homes/'.$home, $data);
-            $this->load->view('templates/footer');
+            $data['title'] = ucfirst($page);
+  
+            $this->load->view('home/'.$page, $data);
         }
     }
  ?>

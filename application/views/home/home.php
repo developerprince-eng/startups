@@ -27,21 +27,33 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Startups</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="<?php echo base_url() ?>assets/images/startupszw1.png" alt=""></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about" >Home</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about" >About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#projects">Contributors</a>
+						</li>
+						<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>dashboard" >Startup Central</a>
+						</li>
+						<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>startups" >List</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
+						</li>
+						<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>user" >Login</a>
             </li>
           </ul>
         </div>
@@ -52,12 +64,13 @@
     <header class="masthead">
       <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
-          <h1 class="mx-auto my-0 text-uppercase">Startupszw</h1>
+					<img class="img-fluid" src="<?php echo base_url() ?>assets/images/startupszw-long.png" alt="">
+          <!--<h1 class="mx-auto my-0 text-uppercase">Startupszw</h1>-->
           <h2 class="text-white-50 mx-auto mt-2 mb-5">Discover Zimbabwe's most innovative + inventive products, projects & startups</h2>
           <a href="#about" class="btn btn-primary js-scroll-trigger" style="border-radius: 5px; background: #9053c7;
-    background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
-    background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
-    background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) ">View Startups</a>
+              background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+              background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+              background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) ">View Startups</a>
         </div>
       </div>
     </header>
@@ -67,7 +80,7 @@
       <div class="container">
         <div class="container">
           <div class="col-lg-12 mx-auto">
-            <h2 class="text-white mb-4">About Platform</h2>
+            <h2 class="text-white mb-4" style="font-size: 3.4rem;padding: 5%; ">About Platform</h2>
             <div class="container">
 
 
@@ -105,6 +118,37 @@
               </div>
             </div>
           </div>
+				</div>
+				
+				<div class="row">
+					<div class="col">
+					  <div class="jumbotron">
+              <h1 class="display-4">Startup Central</h1>
+              <p class="lead">Startup Central is a dashboard that keeps you updated on news related to startups, market data for startups</p>
+              <hr class="my-4">
+              <p>Click the button below to visit Startup Central</p>
+              <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button" style="border-radius: 5px; background: #9053c7;
+                  background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+                  background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+                  background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) ">Startup Central</a>
+              </p>
+            </div>
+					</div>
+					<div class="col">
+					<div class="jumbotron">
+              <h1 class="display-4">Startup List</h1>
+              <p class="lead">Startup List is an index of the startups which provides their briefs and descriptions</p>
+              <hr class="my-4">
+              <p>Click the button below to veiw enlisted startups</p>
+              <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button" style="border-radius: 5px; background: #9053c7;
+                  background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+                  background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+                  background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) ">Startup List</a>
+              </p>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -112,7 +156,8 @@
         </div>
         
       </div>
-    </section>
+		</section>
+		
 
     <!-- Contributors Section -->
     <section id="projects" class="projects-section bg-light">
@@ -122,10 +167,10 @@
 		<div class="row">
           <div class="col-md-4 col-sm-6 team">
             <div class="thumbnail"> 
-              <img src="<?php echo base_url() ?>assets/landing/assets/landing/img/contributors/techvillage.png" alt="..."  style="width: 150px;
-	height: 150px;
-	border: 4px solid transparent;
-	transition: all 0.5s;">
+              <img class="img-fluid" src="<?php echo base_url() ?>assets/landing/assets/landing/img/contributors/techvillage.png" alt="..."  style="width: 150px;
+	               height: 150px;
+	               border: 4px solid transparent;
+	               transition: all 0.5s;">
               <div class="caption">
                 <a href="https://techvillage.org.zw">
                     <h3>TechVillage</h3>
@@ -136,10 +181,10 @@
           </div>
           <div class="col-md-4 col-sm-6 team">
             <div class="thumbnail"> 
-              <img src="<?php echo base_url() ?>assets/landing/assets/landing/img/contributors/velociti.png" alt="..."  style="width: 150px;
-	height: 150px;
-	border: 4px solid transparent;
-	transition: all 0.5s;">
+              <img class="img-fluid" src="<?php echo base_url() ?>assets/landing/assets/landing/img/contributors/velociti.png" alt="..."  style="width: 150px;
+	              height: 150px;
+	              border: 4px solid transparent;
+	              transition: all 0.5s;">
               <div class="caption">
                 <a href="https://velociti.co.zw">
                     <h3>Velociti</h3>
@@ -150,10 +195,10 @@
           </div>
           <div class="col-md-4 col-sm-6 team">
             <div class="thumbnail"> 
-              <img src="<?php echo base_url() ?>assets/landing/assets/landing/img/contributors/shinga-1.png" alt="..."  style="width: 150px;
-	height: 150px;
-	border: 4px solid transparent;
-	transition: all 0.5s;">
+              <img class="img-fluid" src="<?php echo base_url() ?>assets/landing/assets/landing/img/contributors/shinga-1.png" alt="..."  style="width: 150px;
+	              height: 150px;
+	              border: 4px solid transparent;
+	              transition: all 0.5s;">
               <div class="caption">
                 <a href="https://shinga.co.zw">
                     <h3>Shinga</h3>
@@ -169,17 +214,17 @@
      	<div class="row align-content-center">
             <div class="mx-auto text-center">
             	<div class="thumbnail"> <img src="<?php echo base_url() ?>assets/landing/assets/landing/img/partners/hubvisa.jpg" alt="..." style="width: 180px;
-	height: 150px;
-	border: 4px solid transparent;
-	transition: all 0.5s;">
+	              height: 150px;
+	              border: 4px solid transparent;
+	              transition: all 0.5s;">
                 <div class="caption">
-                  <h3>HubVisa</h3>
+                  <h3 style="padding-bottom: 15%;">HubVisa</h3>
                 </div>
               </div>
               <a href="http://demo.hubvisa.co.zw" class="btn btn-default btn-lg page-scroll" style="border-radius: 5px; background: #9053c7;
-    background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
-    background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
-    background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) ">Join HubVisa</a>
+                background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+                background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+                background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) ">Join HubVisa</a>
             </div>
      </div>
       
@@ -197,9 +242,9 @@
             <form class="form-inline d-flex">
               <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
               <button type="submit" class="btn btn-primary mx-auto" style="border-radius: 5px; background: #9053c7;
-    background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
-    background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
-    background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) ">Subscribe</button>
+                background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+                background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+                background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) ">Subscribe</button>
             </form>
 
           </div>

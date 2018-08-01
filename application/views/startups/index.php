@@ -11,16 +11,16 @@
     <title>Startups</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url() ?>landingassets/landing/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/landing/assets/landing/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="<?php echo base_url() ?>landingassets/landing/css/card.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/landing/assets/landing/css/card.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="<?php echo base_url() ?>landingassets/landing/css/grayscale.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/landing/assets/landing/css/grayscale.min.css" rel="stylesheet">
 
   </head>
 
@@ -29,21 +29,33 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Startups</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="imgs-navy" alt=""></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about" >Home</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about" >About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#projects">List</a>
+              <a class="nav-link js-scroll-trigger" href="#projects">Contributors</a>
+						</li>
+						<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>dashboard" >Startup Central</a>
+						</li>
+						<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>startups" >List</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
+						</li>
+						<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>user" >Login</a>
             </li>
           </ul>
         </div>
@@ -67,15 +79,14 @@
      	<h2 class="text-black mb-4 text-center">Startups in Zimbabwe</h2>
      	<div class="portfolio-item">
      		<div class="row">
-			<?php foreach ($startups as $startup): ?>
+		        <?php foreach ($startups as $startup): ?>
             <!-- Startup Card -->
             <div class="col-md-3 col-sm-6 col-lg-3 card-deco show-case">
               <div class="portfolio-item isotope-item" >
                 <div class="card transition hover-bg">
                     <h2 class="transition str-h2"><?php echo $startup['name'] ?></h2>
                       <p class="startup-description str-text"><small><?php echo $startup['brief'] ?></small></p>
-                      <div class="cta-container transition"><a type="" class="cta-name">Bulawayo</a></div>
-                      <div class="cta-container transition"><a href="" class="cta-loc" data-toggle="modal" data-target="#<?php echo $startup['id'] ?>" id="readmore-1">ReadMore</a></div>
+                      <div class="cta-container transition" style="margin-left: -25%;"><a href="" class="cta-loc" data-toggle="modal" data-target="#<?php echo $startup['id'] ?>" id="readmore-1" >ReadMore</a></div>
                       <div class="card_circle transition">
                           <img src="img/startups/Kristel.jpg"/>
                       </div>
@@ -83,14 +94,13 @@
                   </div>
                 </div>
             </div>
-            
      		</div>
      		<!-- Startup Modal -->
 			<div class="modal fade" id="<?php echo $startup['id'] ?>" role="dialog">
-			<div class="modal-dialog" style="margin-top: 8%;">
+		    <div class="modal-dialog" style="margin-top: 8%;">
 				<!-- Startup Modal content-->
 				<div class="modal-content model-design">
-				<div class="modal-header">
+				  <div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 					<img class="img-responsive center-block" src="<?php echo base_url() ?>img/startups/<?php echo $startup['img_url'] ?>" style="max-width: 20%;">
 				</div>
@@ -196,15 +206,15 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="<?php echo base_url() ?>landingassets/landing/vendor/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url() ?>landingassets/landing/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/landing/assets/landing/vendor/jquery/jquery.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/landing/assets/landing/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="<?php echo base_url() ?>landingassets/landing/vendor/font-awesome/js/all.js"></script>
-    <script src="<?php echo base_url() ?>landingassets/landing/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/landing/assets/landing/vendor/font-awesome/js/all.js"></script>
+    <script src="<?php echo base_url() ?>assets/landing/assets/landing/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="<?php echo base_url() ?>landingassets/landing/js/grayscale.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/landing/assets/landing/js/grayscale.js"></script>
 
   </body>
 

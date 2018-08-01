@@ -66,7 +66,8 @@
     <header class="masthead">
       <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
-          <h1 class="mx-auto my-0 text-uppercase">Startupszw</h1>
+				  <img class="img-fluid" src="<?php echo base_url() ?>assets/images/startupszw-long.png" alt="">
+          <!--<h1 class="mx-auto my-0 text-uppercase">Startupszw</h1>-->
           <h2 class="text-white-50 mx-auto mt-2 mb-5">Discover Zimbabwe's most innovative + inventive products, projects & startups</h2>
           
         </div>

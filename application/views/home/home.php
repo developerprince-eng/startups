@@ -81,7 +81,7 @@
       <div class="container">
         <div class="container">
           <div class="col-lg-12 mx-auto">
-            <h2 class="text-white mb-4" style="font-size: 3.4rem;padding: 5%; ">About Platform</h2>
+            <h2 class="text-white mb-4" style="font-size: 3.4rem;padding: 5%; ">Who is this for?</h2>
             <div class="container">
 
 

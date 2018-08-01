@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-
+	  <link rel="icon" type="image/png" href="<?php echo base_url() ?>assets/landing/assets/landing/img/startupszw1.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Enlisting Platform for all startups across africa">

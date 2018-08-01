@@ -26,11 +26,15 @@
     offset: 100
   });
 
+	var initialSrc = "../assets/landing/assets/landing/img/startupszw1.png";
+	var scrollSrc = "../assets/landing/assets/landing/img/startupszw-06.png";
   // Collapse Navbar
   var navbarCollapse = function() {
     if ($("#mainNav").offset().top > 100) {
+			$(".imgs-navy").attr("src", scrollSrc);
       $("#mainNav").addClass("navbar-shrink");
     } else {
+			$(".imgs-navy").attr("src", initialSrc);
       $("#mainNav").removeClass("navbar-shrink");
     }
   };

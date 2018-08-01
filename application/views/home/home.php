@@ -3,6 +3,7 @@
 
   <head>
 
+    <link rel="icon" type="image/png" href="<?php echo base_url() ?>assets/landing/assets/landing/img/startupszw1.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Enlisting Platform for all startups across africa">
@@ -27,7 +28,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="<?php echo base_url() ?>assets/images/startupszw1.png" alt=""></a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="imgs-navy" alt=""></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
@@ -93,8 +94,8 @@
             <div class="bg-black text-center h-100 project">
               <div class="d-flex h-100">
                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                  <h4 class="text-white">Start-ups</h4>
-                  <p class="mb-0 text-white-50">For the innovation hubs, accelerators, founders, learning institutions, private and public companies and investors, this platform will help you to understand the state of the innovation ecosystem in Zimbabwe and discover the innovators in different cities and across different industries. Join us and help grow the innovation ecosystem in Zimbabwe</p>
+                  <h4 class="text-white" style="padding: 10px;">Start-ups</h4>
+                  <p class="mb-0 text-white-50" style="text-align: justify;text-justify: inter-word; padding: 10px;">For the innovation hubs, accelerators, founders, learning institutions, private and public companies and investors, this platform will help you to understand the state of the innovation ecosystem in Zimbabwe and discover the innovators in different cities and across different industries. Join us and help grow the innovation ecosystem in Zimbabwe</p>
                   <hr class="d-none d-lg-block mb-0 ml-0">
                 </div>
               </div>
@@ -111,8 +112,8 @@
             <div class="bg-black text-center h-100 project">
               <div class="d-flex h-100">
                 <div class="project-text w-100 my-auto text-center text-lg-right">
-                  <h4 class="text-white">Ecosystem Builders</h4>
-                  <p class="mb-0 text-white-50">Are you working on the next big thing? Join Zimbabwe’s innovation registry and promote your startup. Get access to resources curated by our partner organisations to help you grow your innovation and take it to the next level and find the right partner, mentor or adviser.</p>
+                  <h4 class="text-white" style="padding: 10px;">Ecosystem Builders</h4>
+                  <p class="mb-0 text-white-50" style="text-align: justify;text-justify: inter-word; padding: 10px;">Are you working on the next big thing? Join Zimbabwe’s innovation registry and promote your startup. Get access to resources curated by our partner organisations to help you grow your innovation and take it to the next level and find the right partner, mentor or adviser.</p>
                   <hr class="d-none d-lg-block mb-0 mr-0">
                 </div>
               </div>
@@ -120,15 +121,15 @@
           </div>
 				</div>
 				
-				<div class="row">
+				<div class="row" style="padding-top: 5%;">
 					<div class="col">
-					  <div class="jumbotron">
+					  <div class="jumbotron" >
               <h1 class="display-4">Startup Central</h1>
-              <p class="lead">Startup Central is a dashboard that keeps you updated on news related to startups, market data for startups</p>
+              <p class="lead">Startup Central keeps you updated on news related to startups, market data for startups</p>
               <hr class="my-4">
               <p>Click the button below to visit Startup Central</p>
               <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button" style="border-radius: 5px; background: #9053c7;
+                <a class="btn btn-primary btn-lg" href="<?php echo base_url() ?>dashboard" role="button" style="border-radius: 5px; background: #9053c7;
                   background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
                   background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
                   background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) ">Startup Central</a>
@@ -136,13 +137,13 @@
             </div>
 					</div>
 					<div class="col">
-					<div class="jumbotron">
+					<div class="jumbotron" >
               <h1 class="display-4">Startup List</h1>
               <p class="lead">Startup List is an index of the startups which provides their briefs and descriptions</p>
               <hr class="my-4">
               <p>Click the button below to veiw enlisted startups</p>
               <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button" style="border-radius: 5px; background: #9053c7;
+                <a class="btn btn-primary btn-lg" href="<?php echo base_url() ?>startups" role="button" style="border-radius: 5px; background: #9053c7;
                   background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
                   background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
                   background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) ">Startup List</a>
@@ -325,7 +326,7 @@
     <script src="<?php echo base_url() ?>assets/landing/assets/landing/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="<?php echo base_url() ?>assets/landing/assets/landing/js/grayscale.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/landing/assets/landing/js/grayscale.js"></script>
 
   </body>
 

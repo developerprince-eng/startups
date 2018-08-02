@@ -134,26 +134,6 @@ class Startup extends CI_Controller{
 
 }
 
-	//resize image file
-public function image_resize($path, $file){
-	
-	$config_resize = array(
-		'image_library' => 'gd2',
-		'source_image' => $path,
-		'create_thumb' => TRUE,
-		'maintain_ratio' => TRUE,
-		'width' => 400,
-		'height' => 400,
-		'new_image' => './image/thumb/'.$file
-	);
-
-	$this->load->library('image_lib', $config_resize);
-	$this->image_lib->resize();
-
-
-}
-
-
 /***** END OF UPLOAD STARTUP CODE */
 	public function update(){
 		if(!$this->session->userdata('logged_in')){
@@ -162,47 +142,5 @@ public function image_resize($path, $file){
 
         $data["title"] = 'Update Startup';
         
-	}
-
-	public function upload_logo(){
-
-		$config = array(
-			'upload_path' => 'upload',
-			'allowed_types' => 'jpg|jpeg|png|bmp',
-			'max_size' => 2000,
-			'max_width' => 400,
-			'max_height' => 400,
-			'filename' => url_title($this->input->post('file'))
-		);
-		$this->load->library('upload', $config);
-
-		if($this->upload->do_upload('file')){
-			$this->db->insert('startup', array(
-				'startup_img' => $this->upload->startup_img
-			));
-			$this->session->set_flashdata('msg', 'Success!!!');
-		}
-
-	}
-
-	public function upload_cover(){
-		$config['upload_path']		= '././assets/images/covers';
-		$config['allowed_type']		= 'jpg|png';
-		$config['max_size']			= 2000;
-		$config['max_width']		= 1200;
-		$config['max_height']		= 400;
-
-		$this->load->library('upload', $config);
-
-		if(!$this->startups->upload_logo('userfile')){
-			$error = array('error' => $this->upload_logo->display_errors());
-
-			$this->load->view('startups/upload', $error);
-		}else{
-			$data = array('upload_data' => $this->upload_logo->data());
-
-			redirect('startups/upload', $data);
-		}
-
 	}
 }

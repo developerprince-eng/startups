@@ -50,7 +50,12 @@
                             Login
                     </button>
                 </div>
-
+				<div class="text-center ">
+                    <a class="txt2" href="<?php echo base_url(); ?>user/register" style="font-family: 'Poppins', sans-serif;">
+                        Create your Account
+                        <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                    </a>
+                </div>
                 <div class="text-center p-t-12">
 						<span class="txt1" style="font-family: 'Poppins', sans-serif;">
                             Forgot
@@ -59,15 +64,10 @@
                         Username / Password?
                     </a>
                 </div>
+				
                 <div class="text-center ">
                     <a class="txt2" href="<?php echo base_url(); ?>">
                        <h3 style="font-family: 'Poppins', sans-serif;">Go Back Home</h3>
-                        <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <div class="text-center p-t-136">
-                    <a class="txt2" href="<?php echo base_url(); ?>user/register" style="font-family: 'Poppins', sans-serif;">
-                        Create your Account
                         <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                     </a>
                 </div>

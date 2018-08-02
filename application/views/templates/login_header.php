@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login</title>
+    <title>Startups</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="icon" type="image" href=<?php echo base_url(); ?>"<?php echo base_url(); ?>assets/images/favicon.ico"/>
+    <link rel="icon" type="image/png" href="<?php echo base_url() ?>assets/landing/assets/landing/img/startupszw1.png">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->

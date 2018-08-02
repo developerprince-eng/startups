@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+$route['user'] = 'user/login';
 $route['startup_cen'] = 'dashboard/index';
 $route['user/register'] = 'user/register';
 $route['startups/register'] = 'startup/upload';

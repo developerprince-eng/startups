@@ -12,7 +12,7 @@
     <!-- Font Awesome CSS-->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/dashboard/vendor/font-awesome/css/font-awesome.min.css">
     <!-- Fontastic Custom icon font-->
-    <link rel="stylesheet" href="css/fontastic.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/dashboard/css/fontastic.css">
     <!-- Google fonts - Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <!-- jQuery Circle-->
@@ -25,9 +25,7 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/dashboard/css/custom.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="<?php echo base_url() ?>assets/dashboard/img/startupszw-06.png">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    
   </head>
   <body>
     <!-- Side Navbar -->

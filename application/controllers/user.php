@@ -32,7 +32,11 @@ class User extends CI_Controller{
 					'email' => $email,
 					'logged_in' => true
 				);
-
+				$this->session->set_userdata('username', $user_id['username']);
+				$this->session->set_userdata('name', $user_id['name']);
+				$this->session->set_userdata('surname', $user_id['surname']);
+				$this->session->set_userdata('profile_img', $user_id['profile_img']);
+				$this->session->set_userdata('role', $user_id['role']);
 				$this->session->set_userdata($user_data);
 				$this->session->set_flashdata('login_successful','Login in Successful');
 				redirect('startups');

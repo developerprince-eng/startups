@@ -8,10 +8,11 @@
 ini_set("allow_url_fopen", 1);
  class Dashboard extends CI_Controller{
 	public function index(){
-		
+		/*
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');
-        }
+		}
+		*/
         
         function CallAPI($method, $url, $data = false)
         {

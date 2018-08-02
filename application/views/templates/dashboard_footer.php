@@ -23,6 +23,6 @@
     <script src="<?php echo base_url() ?>assets/dashboard/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="<?php echo base_url() ?>assets/dashboard/js/charts-home.js"></script>
     <!-- Main File-->
-    <script src="js/front.js"></script>
+    <script src="<?php echo base_url() ?>assets/dashboard/js/front.js"></script>
   </body>
 </html>

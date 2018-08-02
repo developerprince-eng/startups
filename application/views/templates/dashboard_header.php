@@ -1,92 +1,87 @@
+<!DOCTYPE html>
 <html>
-    <head>
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Startup</title>
-    <meta name="description" content=""><html>
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Startup</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Startups Central</title>
     <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Favicons
-        ================================================== -->
-    <link rel="shortcut icon" href="<?php echo base_url('assets/images/favicon.ico'); ?>" type="image/x-icon">
-    <link rel="icon" href="<?php echo base_url('assets/images/favicon.ico'); ?>" type="image/x-icon">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css"  href="<?php echo base_url(); ?>assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/fonts/font-awesome/css/font-awesome.css">
-
-    <!-- Stylesheet
-        ================================================== -->
-    <link rel="stylesheet" type="text/css"  href="<?php echo base_url(); ?>assets/css/style.css">
-    <link rel="stylesheet" type="text/css"  href="<?php echo base_url(); ?>assets/css/newsfeed.css">
-    <link rel="stylesheet" type="text/css"  href="<?php echo base_url(); ?>assets/css/simple-sidebar.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/prettyPhoto.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700|Montserrat+Alternates:400,700|Montserrat:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
- 
-    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/modernizr.custom.js"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/10.1.0/classic/ckeditor.js"></script>
-    <style>
-    p{
-        font-family: 'Montserrat Alternates', sans-serif;
-    }
-    a{
-        font-family: 'Montserrat Alternates', sans-serif;
-    }
-    li{
-        font-family: 'Comfortaa', cursive;
-    }
-    </style>
-    </head>
-    <body>
-    <nav class="cus-nav navbar navbar-default navbar-fixed-top">
-    <div class="cs-container">
-        <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                    <a class="navbar-brand" href="<?php echo base_url(); ?>"><i class="fa fa-sun-o"></i>Startupzw<strong></strong></a>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/dashboard/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href="css/fontastic.css">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <!-- jQuery Circle-->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/dashboard/css/grasp_mobile_progress_circle-1.0.0.min.css">
+    <!-- Custom Scrollbar-->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/dashboard/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/dashboard/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/dashboard/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="<?php echo base_url() ?>assets/dashboard/img/startupszw-06.png">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper">
+        <!-- Sidebar Header    -->
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+          <!-- User Info-->
+          <div class="sidenav-header-inner text-center"><img src="img/avatar-su.png" alt="person" class="img-fluid rounded-circle">
+            <h2 class="h5">Developer Prince</h2><span>Web Developer</span>
+          </div>
+          <!-- Small Brand information, appears on minimized sidebar-->
+          <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>S</strong><strong class="text-primary">U</strong></a></div>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-            <li><a class="cs-nav-right" href="#home" class="page-scroll ">Settings</a></li>
-            <li><a class="cs-nav-right" href="<?php echo base_url('user/profile'); ?>"><i class="material-icons">local_post_office</i></a></li>
-            <li><a href="<?php echo base_url('user/profile'); ?>"><i class="material-icons">notifications_none</i></a></li>
-            <li><a href="<?php echo base_url(); ?>user/logout" class="page-scroll">Logout</a></li>
-        </ul>
-
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+          <h5 class="sidenav-heading">Main</h5>
+          <ul id="side-main-menu" class="side-menu list-unstyled">                  
+            <li><a href="index.html"> <i class="icon-home"></i>Home</a></li>
+            <li><a href="profile.html"> <i class="icon-form"></i>Profile</a></li>
+            <li><a href="market.html"> <i class="fa fa-bar-chart"></i>Market Data</a></li>
+            <li><a href="startups.html"> <i class="icon-grid"></i>Startups</a></li>
+            <li><a href="international.html"> <i class="icon-interface-windows"></i>Global News</a></li>
+            <li><a href="local.html"> <i class="icon-interface-windows"></i>Local News</a></li>
+          </ul>
         </div>
-    </div>
+       
+      </div>
     </nav>
-
-    
-    <meta name="author" content="">
-
-    <!-- Favicons
-        ================================================== -->
-    <link rel="shortcut icon" href="<?php echo base_url('assets/images/favicon.ico'); ?>" type="image/x-icon">
-    <link rel="icon" href="<?php echo base_url('assets/images/favicon.ico'); ?>" type="image/x-icon">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css"  href="<?php echo base_url(); ?>assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/fonts/font-awesome/css/font-awesome.css">
-
-    <!-- Stylesheet
-        ================================================== -->
-    <link rel="stylesheet" type="text/css"  href="<?php echo base_url(); ?>assets/css/style.css">
-    <link rel="stylesheet" type="text/css"  href="<?php echo base_url(); ?>assets/css/newsfeed.css">
-    <link rel="stylesheet" type="text/css"  href="<?php echo base_url(); ?>assets/css/simple-sidebar.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/prettyPhoto.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
- 
-    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/modernizr.custom.js"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/10.1.0/classic/ckeditor.js"></script>
-    </head>
-    <body>
+    <div class="page">
+      <!-- navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="index.html" class="navbar-brand">
+                  <div class="brand-text d-none d-md-inline-block"><span> </span><strong class="text-primary"> Startup Central Dashboard</strong></div></a></div>
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <!-- Notifications dropdown-->
+                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-warning">n</span></a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu">
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-bell"></i>Added New Startups</div>
+                          <div class="notification-time"><small>Number of added Startups</small></div>
+                        </div></a></li>
+                  </ul>
+                </li>
+               
+              
+                <!-- Log out-->
+                <li class="nav-item"><a href="login.html" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>

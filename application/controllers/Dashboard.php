@@ -8,11 +8,11 @@
 ini_set("allow_url_fopen", 1);
  class Dashboard extends CI_Controller{
 	public function index(){
-		/*
+		
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');
         }
-        */
+        
         function CallAPI($method, $url, $data = false)
         {
             $curl = curl_init();
@@ -78,5 +78,63 @@ ini_set("allow_url_fopen", 1);
 		
 	}
 
+	public function globalnews(){
+		/*
+		if(!$this->session->userdata('logged_in')){
+			redirect('user');
+		}
+		*/
 
+		$this->load->view('templates/dashboard_header');
+		$this->load->view('dashboard/global', $data);
+		$this->load->view('templates/dashboard_footer');
+	}	
+
+	public function localnews(){
+		/*
+		if(!$this->session->userdata('logged_in')){
+			redirect('user');
+		}
+		*/
+
+		$this->load->view('templates/dashboard_header');
+		$this->load->view('dashboard/local', $data);
+		$this->load->view('templates/dashboard_footer');
+	}
+
+	public function market(){
+		/*
+		if(!$this->session->userdata('logged_in')){
+			redirect('user');
+		}
+		*/
+
+		$this->load->view('templates/dashboard_header');
+		$this->load->view('dashboard/market', $data);
+		$this->load->view('templates/dashboard_footer');
+	}
+
+	public function profile(){
+		/*
+		if(!$this->session->userdata('logged_in')){
+			redirect('user');
+		}
+		*/
+
+		$this->load->view('templates/dashboard_header');
+		$this->load->view('dashboard/profile', $data);
+		$this->load->view('templates/dashboard_footer');
+	}
+
+	public function startups(){
+		/*
+		if(!$this->session->userdata('logged_in')){
+			redirect('user');
+		}
+		*/
+
+		$this->load->view('templates/dashboard_header');
+		$this->load->view('dashboard/list', $data);
+		$this->load->view('templates/dashboard_footer');
+	}
  }

@@ -53,6 +53,11 @@ class User extends CI_Controller{
         $this->session->unset_userdata('logged_in');
         $this->session->unset_userdata('email');
 		$this->session->unset_userdata('user_id');
+		$this->session->unset_userdata('name');
+		$this->session->unset_userdata('surname');
+		$this->session->unset_userdata('role');
+		$this->session->unset_userdata('username');
+		
 		
 		$this->session->set_flashdata('user_logout','You are now logged out');
 		redirect('user');

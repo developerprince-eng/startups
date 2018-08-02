@@ -35,7 +35,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-					<li class="nav-item">
+						<li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about" >Home</a>
             </li>
             <li class="nav-item">
@@ -53,9 +53,16 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
 						</li>
+						<?php if($this->session->userdata('logged_in')): ?>
 						<li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>user" >Login</a>
-            </li>
+						</li>
+						<?php endif; ?>
+						<?php if(!$this->session->userdata('logged_in')): ?>
+						<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>user/logout" >Logout</a>
+						</li>
+						<?php endif; ?>
           </ul>
         </div>
       </div>

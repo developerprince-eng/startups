@@ -8,11 +8,11 @@
 ini_set("allow_url_fopen", 1);
  class Dashboard extends CI_Controller{
 	public function index(){
-		/*
+		
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');
 		}
-		*/
+		
         
         function CallAPI($method, $url, $data = false)
         {
@@ -80,11 +80,52 @@ ini_set("allow_url_fopen", 1);
 	}
 
 	public function globalnews(){
-		/*
+		
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');
 		}
-		*/
+		
+		function CallAPI($method, $url, $data = false)
+        {
+            $curl = curl_init();
+
+            switch ($method)
+            {
+                case "POST":
+                    curl_setopt($curl, CURLOPT_POST, 1);
+
+                    if ($data)
+                        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+                    break;
+                case "PUT":
+                    curl_setopt($curl, CURLOPT_PUT, 1);
+                    break;
+                default:
+                    if ($data)
+                        $url = sprintf("%s?%s", $url, http_build_query($data));
+            }
+
+            // Optional Authentication:
+            curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+            curl_setopt($curl, CURLOPT_USERPWD, "username:password");
+
+            curl_setopt($curl, CURLOPT_URL, $url);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+            $result = curl_exec($curl);
+
+            curl_close($curl);
+
+            return $result;
+        }
+
+		$url_g = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=2126e74d57f64166a50d6302a83c18be';
+
+		$response_1 = CallAPI(null, $url_g, false);
+
+		$articles = json_decode($response_1, true);
+
+		$data['articles'] = $articles;
 
 		$this->load->view('templates/dashboard_header');
 		$this->load->view('dashboard/global', $data);
@@ -92,11 +133,11 @@ ini_set("allow_url_fopen", 1);
 	}	
 
 	public function localnews(){
-		/*
+		
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');
 		}
-		*/
+		
 
 		$this->load->view('templates/dashboard_header');
 		$this->load->view('dashboard/local', $data);
@@ -104,11 +145,11 @@ ini_set("allow_url_fopen", 1);
 	}
 
 	public function market(){
-		/*
+		
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');
 		}
-		*/
+		
 
 		$this->load->view('templates/dashboard_header');
 		$this->load->view('dashboard/market', $data);
@@ -116,11 +157,11 @@ ini_set("allow_url_fopen", 1);
 	}
 
 	public function profile(){
-		/*
+		
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');
 		}
-		*/
+		
 
 		$this->load->view('templates/dashboard_header');
 		$this->load->view('dashboard/profile', $data);
@@ -128,11 +169,11 @@ ini_set("allow_url_fopen", 1);
 	}
 
 	public function startups(){
-		/*
+		
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');
 		}
-		*/
+		
 
 		$this->load->view('templates/dashboard_header');
 		$this->load->view('dashboard/list', $data);

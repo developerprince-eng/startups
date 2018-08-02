@@ -200,7 +200,10 @@
                           
                         </div>
                         <div class="message-card" style="margin-right: 20%;"> <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</small></div>
-                        <div class="CTAs pull-right"><a href="#" class="btn btn-xs btn-dark"><i class="fa fa-thumbs-up"> </i>Read More</a></div>
+                        <div class="CTAs pull-right"><a href="#" class="btn btn-xs btn-dark" style="border-radius: 5px; background: #9053c7;
+    background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+    background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+    background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) "><i class="fa fa-thumbs-up"> </i>Read More</a></div>
                       </li>
                       
                     </ul>

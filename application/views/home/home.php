@@ -53,12 +53,12 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
 						</li>
-						<?php if($this->session->userdata('logged_in')): ?>
+						<?php if(!$this->session->userdata('logged_in')): ?>
 						<li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>user" >Login</a>
 						</li>
 						<?php endif; ?>
-						<?php if(!$this->session->userdata('logged_in')): ?>
+						<?php if($this->session->userdata('logged_in')): ?>
 						<li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>user/logout" >Logout</a>
 						</li>

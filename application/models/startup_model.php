@@ -11,11 +11,14 @@ class startup_model extends CI_Model{
 		$this->load->database();
 	}
 /** INSERT STARTUP */
-public function insert($startup){
-	$this->db->insert('startup', $startup);
-}
+	public function insert($startup){
+		$this->db->insert('startup', $startup);
+	}
 /** END INSERT STARTUP CODE */
-	public function get_startups($sid = FALSE){
+	public function get_startups($sid = FALSE, $limit = FALSE, $offset = FALSE){
+		if($limit){
+			$this->db->limit($limit, $offset);
+		}
 		if ($sid === FALSE) {
 			$this->db->order_by('id', 'DESC');
 			$query = $this->db->get('startup');

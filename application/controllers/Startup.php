@@ -7,57 +7,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Time: 11:55
  */
 class Startup extends CI_Controller{
-	public function index(){
+	public function index($offset = 0){
 		
-		
+		//Pagination Config 
+		$config['base_url'] = base_url() . 'startups/index/';
+		$config['total_rows'] = $this->db->count_all('startup');
+		$config['per_page'] = 12;
+		$config['uri_segment'] = 2;
+		$config['attributes'] = array('class' => 'page-link');
 
-		$url_g = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=b5f55194d174421ab6ad8bf68d7fcc8b';
-		function CallAPI($method, $url, $data = false)
-		{
-		$curl = curl_init();
-
-		switch ($method)
-			{
-				
-				case "POST":
-					curl_setopt($curl, CURLOPT_POST, 1);
-
-					if ($data)
-						curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-					break;
-				case "PUT":
-					curl_setopt($curl, CURLOPT_PUT, 1);
-					break;
-				default:
-					if ($data)
-						$url = sprintf("%s?%s", $url, http_build_query($data));
-			}
-
-			// Optional Authentication:
-			curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-			curl_setopt($curl, CURLOPT_USERPWD, "username:password");
-
-			curl_setopt($curl, CURLOPT_URL, $url);
-			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-
-			$result = curl_exec($curl);
-
-			curl_close($curl);
-
-			return $result;
-		}
-
-		$url_g = 'https://newsapi.org/v2/top-headlines?sources=the-economist&apiKey=b5f55194d174421ab6ad8bf68d7fcc8b';
-		
-		$response_1 = CallAPI(null, $url_g, false);
-		
-		$articles = json_decode($response_1, true);
-
-		$data['articles'] = $articles;
+		//Initialize Pagination
+		$this->pagination->initialize($config);
 
 		$data['title'] = 'Start ups';
 
-		$data['startups'] = $this->startup_model->get_startups();
+		$data['startups'] = $this->startup_model->get_startups(FALSE, $config['per_page'], $offset);
 		
 
 		$this->load->view('startups/index', $data);

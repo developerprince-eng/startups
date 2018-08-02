@@ -1,9 +1,6 @@
 <div class="limiter">
 		<div class="container-login100">
-			<div class="wrap-login200">
-			<!--echo validation_errors(); 
-			 echo $this->session->flashdata('msg');-->
-				
+			<div class="wrap-login200">	
 				<?php echo form_open_multipart('Startups/upload');?>
 					<div class="login200-form">
 						<span class="login100-form-title"><b>Register Startup</b><br>
@@ -38,19 +35,14 @@
 								</span>
 							</textarea>
 						</div>
-						<div class="flex-container" style="display: flex;">
-							<div style="width: 50%">
+						<div class="flex-container" style="display: flex; text-align: center;">
+							<div style="width: 20%; margin: 0 auto;">
 								<label>Upload Logo</label><br />
 								<input type="file" name="userfile" />
 							</div>
-							<div style="width: 50%;">
-							<label>Upload Cover</label><br />
-							<input type="file" name="userfile" />
-							</div>
 						</div>
 						<div class="container-login100-form-btn">
-							<input type="submit" name="submit" value="upload"  class="btn btn-primary login300-form-btn" />
-							<!--<button  type="submit" class="btn btn-primary login300-form-btn" >REGISTER</button>	-->
+							<input type="submit" name="submit" value="upload"  class="btn btn-primary login300-form-btn"/>
 						</div>			
 					</div>
 			</div>

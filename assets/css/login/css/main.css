@@ -379,7 +379,7 @@ iframe {
 
   width: 30%;
   height: 50px;
-  border-radius: 25px;
+  border-radius: 5px;
   background: #01BAEF;
   display: -webkit-box;
   display: -webkit-flex;
@@ -421,7 +421,7 @@ iframe {
 
   width: 30%;
   height: 50px;
-  border-radius: 25px;
+  border-radius: 5px;
   background: #FFFFFF;
   display: -webkit-box;
   display: -webkit-flex;

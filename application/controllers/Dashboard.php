@@ -80,11 +80,11 @@ ini_set("allow_url_fopen", 1);
 	}
 
 	public function globalnews(){
-		
+		/*
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');
 		}
-		
+		*/
 		function CallAPI($method, $url, $data = false)
         {
             $curl = curl_init();
@@ -125,7 +125,7 @@ ini_set("allow_url_fopen", 1);
 
 		$articles = json_decode($response_1, true);
 
-		$data['articles'] = $articles;
+		$data['articles'] = $articles['articles'];
 
 		$this->load->view('templates/dashboard_header');
 		$this->load->view('dashboard/global', $data);

@@ -7,7 +7,7 @@
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-user"></i></div>
                 <div class="name"><strong class="text-uppercase">Startups Registered</strong><span>To Date</span>
-                  <div class="count-number">25</div>
+                  <div class="count-number"><?php echo $startup; ?></div>
                 </div>
               </div>
             </div>
@@ -16,7 +16,7 @@
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-padnote"></i></div>
                 <div class="name"><strong class="text-uppercase">Users Registered</strong><span>To Date</span>
-                  <div class="count-number">400</div>
+                  <div class="count-number"><?php echo $user; ?></div>
                 </div>
               </div>
             </div>
@@ -25,7 +25,7 @@
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-check"></i></div>
                 <div class="name"><strong class="text-uppercase">New Addition</strong><span>This month</span>
-                  <div class="count-number">3</div>
+                  <div class="count-number"><?php echo $startup; ?></div>
                 </div>
               </div>
             </div>
@@ -34,7 +34,7 @@
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-bill"></i></div>
                 <div class="name"><strong class="text-uppercase">New Users Added</strong><span>This month</span>
-                  <div class="count-number">12</div>
+                  <div class="count-number"><?php echo $user; ?></div>
                 </div>
               </div>
             </div>
@@ -157,19 +157,20 @@
                 </div>
                 <div id="updates-box" role="tabpanel" class="collapse show">
                   <ul class="news list-unstyled">
+										<?php foreach($bbcs as $bbc): ?>
                     <!-- Item-->
                     <li class="d-flex justify-content-between"> 
                       <div class="left-col d-flex">
                         <div class="icon"><i class="icon-rss-feed"></i></div>
-                        <div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        <div class="title"><strong><?php echo $bbc['title'] ?></strong>
+                          <p><?php echo $bbc['description'] ?></p>
                         </div>
                       </div>
                       <div class="right-col text-right">
-                        <div class="update-date">24<span class="month">Jan</span></div>
+                        <div class="update-date"><span class="month"></span></div>
                       </div>
                     </li>
-                    
+										<?php endforeach; ?>
                   </ul>
                 </div>
               </div>
@@ -188,23 +189,24 @@
                   <div class="feed-box">
                     <ul class="feed-elements list-unstyled">
                       
-                      
+                      <?php foreach ($articles as $article): ?>
                       <!-- List-->
                       <li class="clearfix">
                         <div class="feed d-flex justify-content-between">
-                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="" alt="person" class="img-fluid rounded-circle"></a>
-                            <div class="content"><strong>Jason Doe</strong><small>Posted a new Article </small>
-                              <div class="full-date"><small>Today 5:60 pm - 12.06.2014</small></div>
+                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="<?php echo $article['urlToImage'] ?>" alt="person" class="img-fluid rounded-circle"></a>
+                            <div class="content"><strong><?php echo $article['title']?></strong><small></small>
+                              <div class="full-date"><small>Today <?php echo $article['publishedAt']?></small></div>
                             </div>
                           </div>
                           
                         </div>
-                        <div class="message-card" style="margin-right: 20%;"> <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</small></div>
-                        <div class="CTAs pull-right"><a href="#" class="btn btn-xs btn-dark" style="border-radius: 5px; background: #9053c7;
-    background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
-    background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
-    background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) "><i class="fa fa-thumbs-up"> </i>Read More</a></div>
+                        <div class="message-card" style="margin-right: 20%;"> <small><?php echo $article['description'] ?></small></div>
+                        <div class="CTAs pull-right"><a href="<?php echo $article['url'] ?>" class="btn btn-xs btn-dark" style="border-radius: 5px; background: #9053c7;
+    															background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+    															background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+    															background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) "><i class="fa fa-thumbs-up"> </i>Read More</a></div>
                       </li>
+											<?php endforeach; ?>
                       
                     </ul>
                   </div>

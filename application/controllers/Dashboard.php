@@ -8,11 +8,11 @@
 ini_set("allow_url_fopen", 1);
  class Dashboard extends CI_Controller{
 	public function index(){
-		
+		/*
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');
 		}
-		
+		*/
         
         function CallAPI($method, $url, $data = false)
         {
@@ -50,10 +50,14 @@ ini_set("allow_url_fopen", 1);
 
 
         $url_g = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=2126e74d57f64166a50d6302a83c18be';
-        
+		
+		$url_b = 'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=b5f55194d174421ab6ad8bf68d7fcc8b';
+
         $url_xrate1 = 'https://exchangeratesapi.io/api/latest?base=USD';
 
 
+
+		$response_3 = CallAPI(null, $url_b, false);
 
         $response_2 = CallAPI(null, $url_xrate1, false);
 
@@ -62,15 +66,24 @@ ini_set("allow_url_fopen", 1);
         $bit2usd = json_decode($response_2, true);
         
 		$articles = json_decode($response_1, true);
-    
+	
+		$bbcs = json_decode($response_3, true);
+
+		$num_su = $this->startup_model->get_startups_num();
+
+		$num_usr = $this->user_model->get_user_num();
+
+		$data['user'] = $num_usr;
+
+		$data['startup'] = $num_su;
 
         $data['btc2usd'] = $bit2usd;
 
-		$data['articles'] = $articles;
+		$data['articles'] = $articles['articles'];
+
+		$data['bbcs'] = $bbcs['articles'];
 
 		$data['title'] = 'News Feeds';
-
-		
 
 		$this->load->view('templates/dashboard_header');
 		$this->load->view('dashboard/index', $data);
@@ -80,11 +93,11 @@ ini_set("allow_url_fopen", 1);
 	}
 
 	public function globalnews(){
-		/*
+		
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');
 		}
-		*/
+		
 		function CallAPI($method, $url, $data = false)
         {
             $curl = curl_init();

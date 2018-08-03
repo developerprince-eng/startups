@@ -32,5 +32,9 @@ class user_model extends CI_Model{
         ); 
 
         return $this->db->insert('user', $data);
-    }
+	}
+	
+	public function get_user_num(){
+		return $this->db->count_all('user');
+	}
 }

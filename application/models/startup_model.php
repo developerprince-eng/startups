@@ -41,4 +41,8 @@ class startup_model extends CI_Model{
 
 		return $this->db->insert('startup', $data);
 	}
+
+	public function get_startups_num(){
+		return $this->db->count_all('startup');
+	}
 }

@@ -212,11 +212,25 @@ ini_set("allow_url_fopen", 1);
 	}
 
 	public function startups(){
-		
+        
+        /*
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');
 		}
-		
+        */
+        //Pagination Config 
+		$config['base_url'] = base_url() . 'startups/index/';
+		$config['total_rows'] = $this->db->count_all('startup');
+		$config['per_page'] = 12;
+		$config['uri_segment'] = 2;
+		$config['attributes'] = array('class' => 'page-link');
+
+		//Initialize Pagination
+		$this->pagination->initialize($config);
+
+		$data['title'] = 'Start ups';
+
+		$data['startups'] = $this->startup_model->get_startups(FALSE, $config['per_page'], $offset);
 
 		$this->load->view('templates/dashboard_header');
 		$this->load->view('dashboard/list', $data);

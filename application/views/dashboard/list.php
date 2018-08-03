@@ -24,54 +24,53 @@
                   <div class="table-responsive">
                     <table class="table table-striped table-sm">
                       <thead>
+                        <?php if($this->session->userdata('role' == 'user')): ?>
                         <tr>
                           <th>#</th>
                           <th>Name</th>
                           <th>Brief</th>
                           <th>Description</th>
-                         
                         </tr>
                       </thead>
                       <tbody>
+                        <?php foreach($startups as $startup): ?>
                         <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
+                          <th scope="row"><?php echo $startup['id']?></th>
+                          <td><?php echo $startup['name']?></td>
+                          <td><?php echo $startup['brief']?></td>
+                          <td><?php echo $startup['description']?></td>
                         </tr>
+                        <?php endforeach; ?> 
+                        <?php endif; ?>
+                        <?php if($this->session->userdata('role' == 'admin')): ?>
                         <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
+                          <th>#</th>
+                          <th>Name</th>
+                          <th>Brief</th>
+                          <th>Description</th>
+                          <th>Approval</th>
                         </tr>
+                      </thead>
+                      <tbody>
+                        <?php foreach($startups as $startup): ?>
                         <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter      </td>
+                          <th scope="row"><?php echo $startup['id']?></th>
+                          <td><?php echo $startup['name']?></td>
+                          <td><?php echo $startup['brief']?></td>
+                          <td><?php echo $startup['description']?></td>
+                          <?php if( $startup['approve'] == 0): ?>
+                          <td></td>
+                          <?php endif;?>
+                          <?php if( $startup['approve'] == 1): ?>
+                          <td></td>
+                          <?php endif;?>
                         </tr>
-                        <tr>
-                          <th scope="row">4</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">5</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">6</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                        </tr>
+                        <?php endforeach; ?> 
+                        <?php endif; ?>
                       </tbody>
                     </table>
                   </div>
+                  <?php echo $this->pagination->create_links(); ?>
                 </div>
               </div>
             </div>

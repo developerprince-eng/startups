@@ -6,6 +6,7 @@ $route['startup_cen/localnews'] = 'dashboard/localnews';
 $route['startup_cen/market'] = 'dashboard/market';
 $route['startup_cen/profile'] = 'dashboard/profile';
 $route['startup_cen/list'] = 'dashboard/startups';
+$route['startup_cen/list/(:any)'] = 'dashboard/startups/$1';
 $route['startup_cen'] = 'dashboard/index';
 $route['user'] = 'user/login';
 $route['user/register'] = 'user/register';

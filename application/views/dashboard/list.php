@@ -70,7 +70,9 @@
                       </tbody>
                     </table>
                   </div>
-                  <?php echo $this->pagination->create_links(); ?>
+                  <div class="row pagination-links">
+                    <?php echo $this->pagination->create_links(); ?>
+                    </div>
                 </div>
               </div>
             </div>

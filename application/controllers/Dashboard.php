@@ -219,11 +219,11 @@ ini_set("allow_url_fopen", 1);
 		}
         */
         //Pagination Config 
-		$config['base_url'] = base_url() . 'startups/index/';
+		$config['base_url'] = base_url() . 'startup_cen/list';
 		$config['total_rows'] = $this->db->count_all('startup');
 		$config['per_page'] = 12;
-		$config['uri_segment'] = 2;
-		$config['attributes'] = array('class' => 'page-link');
+		$config['uri_segment'] = 3;
+		$config['attributes'] = array('class' => 'col');
 
 		//Initialize Pagination
 		$this->pagination->initialize($config);

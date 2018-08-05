@@ -41,12 +41,12 @@ Download the latest version and Install
 			Edit your virutal host to be like this:
 			
 			<VirtualHost *:80>
-    		DocumentRoot Insert-working-directory
-    		ServerName startups.localhost
-    		<Directory Insert-working-directory>
+    				DocumentRoot Insert-working-directory
+    				ServerName startups.localhost
+    				<Directory Insert-working-directory>
 					Allow from all
 					Require all granted
-    		</Directory>
+    				</Directory>
 			</VirtualHost>
 			
 			save and close 
@@ -58,11 +58,11 @@ Download the latest version and Install
 			
 			save and close
 		
-	4.) MYSQL Run phpmyadmin and create a schema called startups_dev
+4.) MYSQL Run phpmyadmin and create a schema called startups_dev
 	
-			import a file called 'startups_dev.sql' then execute the file it will automatically generate the tables for the database
+			import a file called 'startups_dev.sql' then execute the file it will automatically generate the tables for the 			database
 		
-	5.)	Now that you have setup the project to run you need to edit a few php files and these a php configuration files
+5.)	Now that you have setup the project to run you need to edit a few php files and these a php configuration files
 			
 		i) In you project 
 						
@@ -102,12 +102,14 @@ Download the latest version and Install
 					
 			save and close
 			
-		6.) Once you donw restart xampp and in your broswer type startups.localhost
+6.) Once you donw restart xampp and in your broswer type startups.localhost
 		
-				If you followed all step carefully you should be running locally, if any errors pop please contact 
-				Prince Kudzai Maposa on the following contact details:
-				Cellphone: +263 716661298
-				email: prince@techvillage.org.zw
+		If you followed all step carefully you should be running locally, if any errors pop please contact 
+		Prince Kudzai Maposa on the following contact details:
+		Cellphone: +263 716661298
+		email: prince@techvillage.org.zw
+
+
 				
 ################
 Common Practices

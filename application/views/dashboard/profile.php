@@ -47,7 +47,10 @@
                     <div class="form-group row">
                       <div class="col-sm-4 offset-sm-2">
                         
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-primary" style="border-radius: 5px; background: #9053c7;
+              background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+              background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+              background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) ">Save changes</button>
                       </div>
                     </div>
                   </form>

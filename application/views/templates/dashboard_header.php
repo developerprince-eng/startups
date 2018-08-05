@@ -34,7 +34,7 @@
         <!-- Sidebar Header    -->
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <!-- User Info-->
-          <div class="sidenav-header-inner text-center"><img src="img/avatar-su.png" alt="person" class="img-fluid rounded-circle">
+          <div class="sidenav-header-inner text-center"><img src="<?php echo base_url() ?>assets/dashboard/img/avatar-su.png" alt="person" class="img-fluid rounded-circle">
             <h2 class="h5">Developer Prince</h2><span>Web Developer</span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
@@ -44,12 +44,12 @@
         <div class="main-menu">
           <h5 class="sidenav-heading">Main</h5>
           <ul id="side-main-menu" class="side-menu list-unstyled">                  
-            <li><a href="index.html"> <i class="icon-home"></i>Home</a></li>
-            <li><a href="profile.html"> <i class="icon-form"></i>Profile</a></li>
-            <li><a href="market.html"> <i class="fa fa-bar-chart"></i>Market Data</a></li>
-            <li><a href="startups.html"> <i class="icon-grid"></i>Startups</a></li>
-            <li><a href="international.html"> <i class="icon-interface-windows"></i>Global News</a></li>
-            <li><a href="local.html"> <i class="icon-interface-windows"></i>Local News</a></li>
+            <li><a href="<?php echo base_url() ?>startup_cen"> <i class="icon-home"></i>Home</a></li>
+            <li><a href="<?php echo base_url() ?>startup_cen/profile"> <i class="icon-form"></i>Profile</a></li>
+            <li><a href="<?php echo base_url() ?>startup_cen/market"> <i class="fa fa-bar-chart"></i>Market Data</a></li>
+            <li><a href="<?php echo base_url() ?>startup_cen/list"> <i class="icon-grid"></i>Startups</a></li>
+            <li><a href="<?php echo base_url() ?>startup_cen/globalnews"> <i class="icon-interface-windows"></i>Global News</a></li>
+            <li><a href="<?php echo base_url() ?>startup_cen/localnews"> <i class="icon-interface-windows"></i>Local News</a></li>
           </ul>
         </div>
        

@@ -45,7 +45,7 @@
               <a class="nav-link js-scroll-trigger" href="#projects">Contributors</a>
 						</li>
 						<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>dashboard" >Startup Central</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>startup_cen" >Startup Central</a>
 						</li>
 						<li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>startups" >List</a>

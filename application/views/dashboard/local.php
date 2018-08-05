@@ -16,7 +16,10 @@
                         <p class="lead">This is a feature still under development which give your news updates about startup in our region.</p>
                         <hr class="my-4">
                         <p class="lead">
-                            <a class="btn btn-primary btn-lg" href="index.html" role="button" >Go Back Home</a>
+                            <a class="btn btn-primary btn-lg" href="<?php echo base_url() ?>startup_cen" role="button" style="border-radius: 5px; background: #9053c7;
+              background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+              background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+              background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) " >Go Back Home</a>
                         </p>
                     </div>
                 </div>

@@ -10,11 +10,11 @@ class Startup extends CI_Controller{
 	public function index($offset = 0){
 		
 		//Pagination Config 
-		$config['base_url'] = base_url() . 'startups/index/';
+		$config['base_url'] = base_url() . 'startups/';
 		$config['total_rows'] = $this->db->count_all('startup');
 		$config['per_page'] = 12;
 		$config['uri_segment'] = 2;
-		$config['attributes'] = array('class' => 'page-link');
+		$config['attributes'] = array('class' => 'col');
 
 		//Initialize Pagination
 		$this->pagination->initialize($config);

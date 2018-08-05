@@ -22,7 +22,7 @@
 
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url() ?>assets/landing/assets/landing/css/grayscale.min.css" rel="stylesheet">
-
+    <link href="<?php echo base_url() ?>assets/landing/assets/landing/css/util.css" rel="stylesheet">
   </head>
 
   <body id="page-top">
@@ -47,7 +47,7 @@
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>#projects">Contributors</a>
 						</li>
 						<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>dashboard" >Startup Central</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>startup_cen" >Startup Central</a>
 						</li>
 						<li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>startups" >List</a>
@@ -134,11 +134,9 @@
      			</div>
 					
 
-					<nav aria-label="startup pagination">
-					<ul class="pagination justify-content-center">
-					<?php echo $this->pagination->create_links(); ?>
-					</ul>
-				</nav>
+				<div class="row pagination-links">
+          <?php echo $this->pagination->create_links(); ?>
+        </div>
 				</div>		
      	
      	

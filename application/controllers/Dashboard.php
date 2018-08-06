@@ -213,11 +213,11 @@ ini_set("allow_url_fopen", 1);
 
 	public function startups(){
         
-        /*
+        
 		if(!$this->session->userdata('logged_in')){
 			redirect('user');
 		}
-        */
+        
         //Pagination Config 
 		$config['base_url'] = base_url() . 'startup_cen/list';
 		$config['total_rows'] = $this->db->count_all('startup');

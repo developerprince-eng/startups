@@ -35,7 +35,7 @@
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <!-- User Info-->
           <div class="sidenav-header-inner text-center"><img src="<?php echo base_url() ?>assets/dashboard/img/avatar-su.png" alt="person" class="img-fluid rounded-circle">
-            <h2 class="h5">Developer Prince</h2><span>Web Developer</span>
+            <h2 class="h5"></h2><?php echo $this->session->userdata('username'); ?></h2><span>Web Developer</span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
           <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>S</strong><strong class="text-primary">U</strong></a></div>
@@ -77,7 +77,7 @@
                
               
                 <!-- Log out-->
-                <li class="nav-item"><a href="login.html" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a></li>
+                <li class="nav-item"><a href="<?php echo base_url() ?>user/logout" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a></li>
               </ul>
             </div>
           </div>

@@ -24,7 +24,7 @@
                   <div class="table-responsive">
                     <table class="table table-striped table-sm">
                       <thead>
-                        <?php if($this->session->userdata('role' == 'user')): ?>
+                        <?php if($this->session->userdata('role')  === 'user'): ?>
                         <tr>
                           <th>#</th>
                           <th>Name</th>
@@ -42,7 +42,7 @@
                         </tr>
                         <?php endforeach; ?> 
                         <?php endif; ?>
-                        <?php if($this->session->userdata('role' == 'admin')): ?>
+                        <?php if($this->session->userdata('role') === 'admin'): ?>
                         <tr>
                           <th>#</th>
                           <th>Name</th>

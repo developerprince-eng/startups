@@ -25,20 +25,18 @@ class User extends CI_Controller{
 
 			$user_id = $this->user_model->login($email, $enc_password);
 
-			if($user_id){
+			if(!empty($user_id)){
 				//Create Session
-				$user_data = array(
-					'user_id' => $user_id,
-					'email' => $email,
-					'logged_in' => true
-				);
+
 				$this->session->set_userdata('username', $user_id['username']);
 				$this->session->set_userdata('name', $user_id['name']);
 				$this->session->set_userdata('surname', $user_id['surname']);
 				$this->session->set_userdata('profile_img', $user_id['profile_img']);
 				$this->session->set_userdata('role', $user_id['role']);
-				$this->session->set_userdata($user_data);
+				$this->session->set_userdata('logged_in', true);
 				$this->session->set_flashdata('login_successful','Login in Successful');
+
+				var_dump($user_id);
 				redirect('startups');
 			}else{
 				$this->session->set_flashdata('login_failed','Login in invalid check email & password');

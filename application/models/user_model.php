@@ -15,13 +15,9 @@ class user_model extends CI_Model{
          $this->db->where('email', $email);
          $this->db->where('password', $enc_password);
 
-         $result = $this->db->get('user');
+         $query = $this->db->get('user');
 
-         if($result->num_rows() == 1){
-             return $result->row(0)->id;
-         }else{
-             return false;
-         }
+        return $query->result();
     }   
 
     public function register($enc_password){

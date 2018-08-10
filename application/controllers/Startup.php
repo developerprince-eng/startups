@@ -23,7 +23,7 @@ class Startup extends CI_Controller{
 
 		$data['startups'] = $this->startup_model->get_startups(FALSE, $config['per_page'], $offset);
 		
-		var_dump($this->session->userdata('username'));
+		//var_dump($this->session->userdata('role'));
 		$this->load->view('startups/index', $data);
 	}
 

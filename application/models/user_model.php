@@ -11,13 +11,10 @@ class user_model extends CI_Model{
     }
 
     public function login ($email, $enc_password){
-        
-         $this->db->where('email', $email);
-         $this->db->where('password', $enc_password);
+    
+         $query = $this->db->get_where('user', array('email' => $email, 'password' => $enc_password));
 
-         $query = $this->db->get('user');
-
-        return $query->result();
+        return $query->row_array();
     }   
 
     public function register($enc_password){

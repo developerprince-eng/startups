@@ -142,7 +142,7 @@ ini_set("allow_url_fopen", 1);
 		
 
 		$this->load->view('templates/dashboard_header');
-		$this->load->view('dashboard/local', $data);
+		$this->load->view('dashboard/local');
 		$this->load->view('templates/dashboard_footer');
 	}
 

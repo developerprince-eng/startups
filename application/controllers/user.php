@@ -35,15 +35,16 @@ class User extends CI_Controller{
 				$this->session->set_userdata('role', $user_id['role']);
 				$this->session->set_userdata('logged_in', true);
 				$this->session->set_flashdata('login_successful','Login in Successful');
-
-				var_dump($user_id);
-				redirect('startups');
+				$data['user'] = $user_id;
+				
+				redirect('startups', $data);
 			}else{
 				$this->session->set_flashdata('login_failed','Login in invalid check email & password');
 				redirect('user');
 			}
 
 			redirect('startup');
+			
 		}
 	}
 

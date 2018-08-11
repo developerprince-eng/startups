@@ -10,11 +10,9 @@ class startup_model extends CI_Model{
 	public function __construct(){
 		$this->load->database();
 	}
-/** INSERT STARTUP */
 	public function insert($startup){
 		$this->db->insert('startup', $startup);
 	}
-/** END INSERT STARTUP CODE */
 	public function get_startups($sid = FALSE, $limit = FALSE, $offset = FALSE){
 		if($limit){
 			$this->db->limit($limit, $offset);
@@ -28,7 +26,6 @@ class startup_model extends CI_Model{
 		$query = $this->db->get_where('startup', array('sid' => $sid));
 		return $query->row_array();
 	}
-
 	public function create_startup(){
 		$sid = md5(url_title($this->input->post('name')));
 
@@ -41,8 +38,19 @@ class startup_model extends CI_Model{
 
 		return $this->db->insert('startup', $data);
 	}
-
 	public function get_startups_num(){
 		return $this->db->count_all('startup');
+	}
+	public function delete($id){
+		$this->db->where('id', $id);
+		$this->db->delete('startup');
+	}
+	public function appove($id){
+		$this->db->where('id', $id);
+		$this->db->update('startup', array('approve' => 1));
+	}
+	public function suspend($id){
+		$this->db->where('id', $id);
+		$this->db->update('startup', array('approve' => 0));
 	}
 }

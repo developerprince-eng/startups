@@ -239,13 +239,16 @@ ini_set("allow_url_fopen", 1);
     public function delete_startup($id){
         $this->startup_model->delete($id);
         redirect('startup_cen/list');
+        return true;
     }
     public function approve(){
         $this->startup_model->approve();
         redirect('startup_cen/list');
+        return true;
     }
     public function suspend(){
         $this->startup_model->suspend();
         redirect('startup_cen/list');
+        return true;
     }
  }

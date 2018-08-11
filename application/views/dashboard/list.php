@@ -59,10 +59,16 @@
                           <td><?php echo $startup['brief']?></td>
                           <td><?php echo $startup['description']?></td>
                           <?php if( $startup['approve'] == 0): ?>
-                          <td></td>
+                          <td>
+                            <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
+                          </td>
                           <?php endif;?>
                           <?php if( $startup['approve'] == 1): ?>
-                          <td></td>
+                          <td>
+                            <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                          </td>
                           <?php endif;?>
                         </tr>
                         <?php endforeach; ?> 

@@ -89,6 +89,7 @@
 			 	<div class="container">
 				  <div class="row">
 		        <?php foreach ($startups as $startup): ?>
+            <?php if($startup['approve'] == 1): ?>
             <!-- Startup Card -->
             <div class="col-md-3 col-sm-6 col-lg-3 card-deco show-case" style="padding-bottom: 5%;">
               <div class="portfolio-item isotope-item" >
@@ -130,6 +131,7 @@
 								</div>
 							</div>
 						</div>
+            <?php endif; ?>
 						<?php endforeach; ?>
      			</div>
 					

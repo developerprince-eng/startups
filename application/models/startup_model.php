@@ -41,16 +41,17 @@ class startup_model extends CI_Model{
 	public function get_startups_num(){
 		return $this->db->count_all('startup');
 	}
-	public function delete($id){
-		$this->db->where('id', $id);
+	public function delete(){
+
+		$this->db->where('id', $_POST['id']);
 		$this->db->delete('startup');
 	}
-	public function appove($id){
-		$this->db->where('id', $id);
+	public function appove(){
+		$this->db->where('id', $_POST['id']);
 		$this->db->update('startup', array('approve' => 1));
 	}
-	public function suspend($id){
-		$this->db->where('id', $id);
+	public function suspend(){
+		$this->db->where('id', $_POST['id']);
 		$this->db->update('startup', array('approve' => 0));
 	}
 }

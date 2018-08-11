@@ -235,5 +235,14 @@ ini_set("allow_url_fopen", 1);
 		$this->load->view('templates/dashboard_header');
 		$this->load->view('dashboard/list', $data);
 		$this->load->view('templates/dashboard_footer');
-	}
+    }
+    public function delete_startup(){
+        $this->startup_model->delete();
+    }
+    public function approve(){
+        $this->startup_model->approve();
+    }
+    public function suspend(){
+        $this->startup_model->suspend();
+    }
  }

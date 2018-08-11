@@ -8,68 +8,21 @@
         </div>
       </div>
       <section class="charts">
-        <div class="container-fluid">
-          <!-- Page Header-->
-          <header> 
-            <h1 class="h3 display">Market</h1>
-          </header>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="card line-chart-example">
-                <div class="card-header d-flex align-items-center">
-                  <h4>Line Chart Example</h4>
+      <div class="container" style="margin-top: 40px; text-align: center">
+            <div class="row">
+                <div>
+                    <div class="jumbotron" style="width: 50%; margin: 0 auto;">
+                        <h1 class="display-4">Coming Soon</h1>
+                        <p class="lead">This is a feature still under development which give your news updates about startup in our region.</p>
+                        <hr class="my-4">
+                        <p class="lead">
+                            <a class="btn btn-primary btn-lg" href="<?php echo base_url() ?>startup_cen" role="button" style="border-radius: 5px; background: #9053c7;
+              background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+              background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+              background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF) " >Go Back Home</a>
+                        </p>
+                    </div>
                 </div>
-                <div class="card-body">
-                  <canvas id="lineChartExample"></canvas>
-                </div>
-              </div>
             </div>
-            <div class="col-lg-6">
-              <div class="card bar-chart-example">
-                <div class="card-header d-flex align-items-center">
-                  <h4>Bar Chart Example</h4>
-                </div>
-                <div class="card-body">
-                  <canvas id="barChartExample"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card pie-chart-example">
-                <div class="card-header d-flex align-items-center">
-                  <h4>Pie Chart Example</h4>
-                </div>
-                <div class="card-body">
-                  <div class="chart-container">
-                    <canvas id="pieChartExample"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card polar-chart-example">
-                <div class="card-header d-flex align-items-center">
-                  <h4>Ploar Chart Example</h4>
-                </div>
-                <div class="card-body">
-                  <div class="chart-container">
-                    <canvas id="polarChartExample"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <div class="card radar-chart-example">
-                <div class="card-header d-flex align-items-center">
-                  <h4>Radar Chart Example</h4>
-                </div>
-                <div class="card-body">
-                  <div class="chart-container">
-                    <canvas id="radarChartExample"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>

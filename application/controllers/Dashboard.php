@@ -241,13 +241,13 @@ ini_set("allow_url_fopen", 1);
         redirect('startup_cen/list');
         return true;
     }
-    public function approve(){
-        $this->startup_model->approve();
+    public function approve($id){
+        $this->startup_model->approve($id);
         redirect('startup_cen/list');
         return true;
     }
-    public function suspend(){
-        $this->startup_model->suspend();
+    public function suspend($id){
+        $this->startup_model->suspend($id);
         redirect('startup_cen/list');
         return true;
     }

@@ -60,19 +60,22 @@
                           <td><?php echo $startup['description']?></td>
                           <?php if( $startup['approve'] == 0): ?>
                           <td>
-                            <?php echo form_open('startup_cen/delete/'. $startup['id'])?>
+                            <?php echo form_open('/dashboard/delete_startup/'. $startup['id'])?>
                               <input type="submit" value="delete" class="btn btn-danger">
                             </form>
-                            
-                            <a href="<?php echo base_url(). "startup_cen/approve/". $startup['id'] ?>"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
+                            <?php echo form_open('/dashboard/approve/'. $startup['id'])?>
+                              <input type="submit" value="approve" class="btn btn-primary">
+                            </form>
                           </td>
                           <?php endif;?>
                           <?php if( $startup['approve'] == 1): ?>
                           <td>
-                            <?php echo form_open('startup_cen/delete/'. $startup['id'])?>
+                            <?php echo form_open('/dashboard/delete_startup/'. $startup['id'])?>
                               <input type="submit" value="delete" class="btn btn-danger">
                             </form>
-                            <a href="<?php echo base_url(). "startup_cen/suspend/". $startup['id'] ?>"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                            <?php echo form_open('/dashboard/suspend/'. $startup['id'])?>
+                              <input type="submit" value="suspend" class="btn btn-secondary">
+                            </form>
                           </td>
                           <?php endif;?>
                         </tr>

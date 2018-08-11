@@ -46,7 +46,7 @@ class startup_model extends CI_Model{
 		$this->db->delete('startup');
 		return true;
 	}
-	public function appove($id){
+	public function approve($id){
 		$this->db->where('id', $id);
 		$this->db->update('startup', array('approve' => 1));
 		return true;

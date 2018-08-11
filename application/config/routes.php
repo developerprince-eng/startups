@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+//$route['startup_cen/delete'] = 'dashboard/delete_startup';
+//$route['startup_cen/approve'] = 'dashboard/approve';
+//$route['startup_cen/suspend'] = 'dashboard/suspend';
 $route['startup_cen/globalnews'] = 'dashboard/globalnews';
-$route['startup_cen/delete'] = 'dashboard/delete_startup';
-$route['startup_cen/approve'] = 'dashboard/approve';
-$route['startup_cen/suspend'] = 'dashboard/suspend';
 $route['startup_cen/localnews'] = 'dashboard/localnews';
 $route['startup_cen/market'] = 'dashboard/market';
 $route['startup_cen/profile'] = 'dashboard/profile';

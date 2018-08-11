@@ -60,13 +60,19 @@
                           <td><?php echo $startup['description']?></td>
                           <?php if( $startup['approve'] == 0): ?>
                           <td>
-                            <a href="<?php echo base_url(). "startup_cen/list/delete?id=". $startup['id'] ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            <?php echo form_open('startup_cen/list/delete/'. $startup['id'])?>
+                              <input type="submit" value="delete" class="btn btn-danger">
+                            </form>
+                            <!--<a href="<?php echo base_url(). "startup_cen/list/delete?id=". $startup['id'] ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>-->
                             <a href="<?php echo base_url(). "startup_cen/list/approve?id=". $startup['id'] ?>"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                           </td>
                           <?php endif;?>
                           <?php if( $startup['approve'] == 1): ?>
                           <td>
-                            <a href="<?php echo base_url(). "startup_cen/list/delete?id=". $startup['id'] ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            <?php echo form_open('startup_cen/list/delete/'. $startup['id'])?>
+                              <input type="submit" value="delete" class="btn btn-danger">
+                            </form>
+                            <!--<a href="<?php echo base_url(). "startup_cen/list/delete?id=". $startup['id'] ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>-->
                             <a href="<?php echo base_url(). "startup_cen/list/suspend?id=". $startup['id'] ?>"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
                           </td>
                           <?php endif;?>

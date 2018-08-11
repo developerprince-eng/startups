@@ -236,8 +236,8 @@ ini_set("allow_url_fopen", 1);
 		$this->load->view('dashboard/list', $data);
 		$this->load->view('templates/dashboard_footer');
     }
-    public function delete_startup(){
-        $this->startup_model->delete();
+    public function delete_startup($id){
+        $this->startup_model->delete($id);
         redirect('startup_cen/list');
     }
     public function approve(){

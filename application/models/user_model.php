@@ -17,6 +17,13 @@ class user_model extends CI_Model{
         return $query->row_array();
     }   
 
+    public function reset ($from, $enc_password){
+        $data = array(
+            'password' => $enc_password
+        ); 
+        $this->db->where('cellphone', $from);
+        $this->db->update('user', $data);
+    }
     public function register($enc_password){
         $data = array(
                 'email' => $this->input->post('email'),

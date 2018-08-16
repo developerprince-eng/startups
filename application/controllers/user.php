@@ -10,12 +10,12 @@ class User extends CI_Controller{
 	public function login(){
 		$data['title'] = 'Login';
 
-		$this->form_validation->set_rules('email', 'Email', 'required');
+		//$this->form_validation->set_rules('email', 'Email', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
 
 		if($this->form_validation->run() === FALSE){
 			$this->load->view('templates/login_header');
-			$this->load->view('users/index');
+			$this->load->view('users/reset');
 			$this->load->view('templates/login_footer');
 		}else {
 
@@ -23,7 +23,7 @@ class User extends CI_Controller{
 			$email = $this->input->post('email');
 			$enc_password = md5($this->input->post('password'));
 
-			$user_id = $this->user_model->login($email, $enc_password);
+			$user_id = $this->user_model->reset($to, $enc_password);
 
 			if(!empty($user_id)){
 				//Create Session
@@ -84,6 +84,40 @@ class User extends CI_Controller{
 			$this->session->set_flashdata('user_registered','You are now Registered and Login');
 
 			redirect('user');
+		}
+	}
+
+	public function reset(){
+		$data['title'] = 'Login';
+
+		$this->form_validation->set_rules('email', 'Email', 'required');
+		$this->form_validation->set_rules('password', 'Password', 'required');
+
+		if($this->form_validation->run() === FALSE){
+			$this->load->view('templates/login_header');
+			$this->load->view('users/index');
+			$this->load->view('templates/login_footer');
+		}else {
+
+			
+			$email = $this->input->post('email');
+			$enc_password = md5($this->input->post('password'));
+
+			$user_id = $this->user_model->login($email, $enc_password);
+
+			if(!empty($user_id)){
+				
+				$this->session->set_flashdata('login_successful','Login in Successful');
+				$data['user'] = $user_id;
+				
+				redirect('user', $data);
+			}else{
+				$this->session->set_flashdata('login_failed','Login in invalid check email & password');
+				redirect('user/reset');
+			}
+
+			redirect('user');
+			
 		}
 	}
 }

@@ -12,6 +12,7 @@ $route['startup_cen/list'] = 'dashboard/startups';
 $route['startup_cen/list/(:any)'] = 'dashboard/startups/$1';
 $route['startup_cen'] = 'dashboard/index';
 $route['user'] = 'user/login';
+$route['user/reset'] = 'user/reset';
 $route['user/register'] = 'user/register';
 $route['startups/register'] = 'startup/upload';
 $route['startups'] = 'startup/index';

@@ -140,7 +140,14 @@
           <?php echo $this->pagination->create_links(); ?>
         </div>
 				</div>		
-     	
+     	  <div>
+         <a href="<?php echo base_url() ?>startups/register">
+         <button type="button" class="btn btn-primary" style=" border-radius: 5px; background: #9053c7;
+    background: -webkit-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+    background: -o-linear-gradient(-135deg, #0B4F6C, #01BAEF);
+    background: -moz-linear-gradient(-135deg, #0B4F6C, #01BAEF)">Register Startup</button>
+         </a>
+         </div>
      	
 			
 			</div>

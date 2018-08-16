@@ -35,7 +35,7 @@
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <!-- User Info-->
           <div class="sidenav-header-inner text-center"><img src="<?php echo base_url() ?>assets/dashboard/img/avatar-su.png" alt="person" class="img-fluid rounded-circle">
-            <h2 class="h5"></h2><?php echo $this->session->userdata('username'); ?></h2><span>Web Developer</span>
+            <h2 class="h5"></h2><?php echo $this->session->userdata('username'); ?></h2><span></span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
           <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>S</strong><strong class="text-primary">U</strong></a></div>
@@ -47,9 +47,11 @@
             <li><a href="<?php echo base_url() ?>startup_cen"> <i class="icon-home"></i>Home</a></li>
             <li><a href="<?php echo base_url() ?>startup_cen/profile"> <i class="icon-form"></i>Profile</a></li>
             <li><a href="<?php echo base_url() ?>startup_cen/market"> <i class="fa fa-bar-chart"></i>Market Data</a></li>
-            <li><a href="<?php echo base_url() ?>startup_cen/list"> <i class="icon-grid"></i>Startups</a></li>
+            <li><a href="<?php echo base_url() ?>startup_cen/list"> <i class="icon-grid"></i>Startup ListView</a></li>
+            <li><a href="<?php echo base_url() ?>startups"> <i class="icon-grid"></i>Startup GridView</a></li>
             <li><a href="<?php echo base_url() ?>startup_cen/globalnews"> <i class="icon-interface-windows"></i>Global News</a></li>
             <li><a href="<?php echo base_url() ?>startup_cen/localnews"> <i class="icon-interface-windows"></i>Local News</a></li>
+            <li><a href="<?php echo base_url() ?>startups/register"> <i class="icon-grid"></i>Register Startup</a></li>
           </ul>
         </div>
        

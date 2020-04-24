@@ -30,7 +30,7 @@ Download the latest version and Install
 
 2. After you have installed WAMP or LAMP configure your project to run on your WAMP (Apache and MySql) 
 
-	i)   Clone the repository to you local working directory and working directory will be the "htdocs" folder in apache2 server within your WAMP or LAMP
+	1.  Clone the repository to you local working directory and working directory will be the "htdocs" folder in apache2 server within your WAMP or LAMP
 
 		'git clone https://github.com/developerprince-eng/startups.git'
 		
@@ -41,52 +41,49 @@ Download the latest version and Install
 		
 3. MYSQL Run phpmyadmin and create a schema called startups_dev
 	
-			import a file called 'startups_dev.sql' then execute the file it will automatically generate the tables for the database
+import a file called _startups_dev.sql_ then execute the file it will automatically generate the tables for the database
 		
 4.	Now you need to create a dotenv file 
 			
-		i. Project Dictory
+	1. Project Dictory
 
-		+-- startups			
-		|	+-- aplication
-		|	+-- assets
-		|   +-- system
-		|	+-- tests
-		|	+-- vendor
-		|	+-- .editorconfig
-		|	+-- .env
-		|	+-- .gitignore
-		|	+-- .dotenv
-		|	+-- .htaccess
-		|	+-- .loadenv.php
-		|	+-- contrubuting.md 
-		|	+-- composer.json
-		|	+-- composer.lock
-		|	+-- index.php
-		|	+-- palette.pdf
-		|	+-- readme.rst 
-		|	+-- startups_dev.sql	
+	+-- startups			
+	|	+-- application
+	|	+-- assets
+	|   +-- system
+	|	+-- tests
+	|	+-- vendor
+	|	+-- .editorconfig
+	|	+-- .env
+	|	+-- .gitignore
+	|	+-- .dotenv
+	|	+-- .htaccess
+	|	+-- .loadenv.php
+	|	+-- contrubuting.md 
+	|	+-- composer.json
+	|	+-- composer.lock
+	|	+-- index.php
+	|	+-- palette.pdf
+	|	+-- readme.rst 
+	|	+-- startups_dev.sql	
 
-		Copy everything in _.dotenv_ to _.env_ and database name to match the DB on you *phpadmin* and credentials
-				
-		ii. install dependencies
+	Copy everything in _.dotenv_ to _.env_ and database name to match the DB on you *phpadmin* and credentials
+			
+	2. install dependencies
 ```bash 
 composer i
 ```
 					
-			save and close
+save and close
 			
 5. Once you done restart WAMP or LAMP stack and in your browser type 'localhost/startup'
-		
-		If you followed all step carefully you should be running locally, if any errors pop please contact 
-		Prince Kudzai Maposa on the following contact details:
-		Cellphone: +263 786808538
+
+If you followed all step carefully you should be running locally, if any errors pop please contact 
+Prince Kudzai Maposa on the following contact details:
+Cellphone: +263 786808538
 
 
-				
-################
-Common Practices
-################
+## Common Practices
 
 Please take note of the following common practices 
 
@@ -95,5 +92,5 @@ to merge you branch to the master. This done especially experimenting on new fea
 
 Happy Coding 
 
-Developed by DeveloperPrince
+Developed by *DeveloperPrince*
 

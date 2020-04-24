@@ -1,6 +1,7 @@
-################
-Startups Platform
-################
+
+# Startups Platform
+
+![DeveloperPrince](https://developerprince.herokuapp.com/static/assets/images/logo.png)
 
 Startups is a platform Designed to enlist all Startups across Zimbabwe and
 its serves to act as an interface between investors and startups.
@@ -8,25 +9,26 @@ The platform will support rich feature such as startup related news, market
 performances for the startups and Guide to aid startups in seeking the investment 
 of their choice.
 
-#####################################################
-How to Setup Locally on your machine for Development?
-#####################################################
+## How to Setup Locally on your machine for Development?
+
 
 If you are a developer I suggest you use the following tools for development:
 
+php7
+composer
 Hosting: WAMP or LAMP
 Code editor: VSCODE (alternative phpstorm)
 Database: MYSQL, phpadmin (use mysqlworkbench as an additional optional tool)
 
 After obtaining these tools please makes sure you followig steps
 	
-1.)Install and setup WAMP or LAMP using BITNAMI  
+1. Install and setup WAMP or LAMP using BITNAMI  
 
 visit: https://bitnami.com/stacks
 
 Download the latest version and Install
 
-2.) After you have installed WAMP or LAMP configure your project to run on your WAMP (Apache and MySql) 
+2. After you have installed WAMP or LAMP configure your project to run on your WAMP (Apache and MySql) 
 
 	i)   Clone the repository to you local working directory and working directory will be the "htdocs" folder in apache2 server within your WAMP or LAMP
 
@@ -37,41 +39,44 @@ Download the latest version and Install
 			
 		save and close
 		
-3.) MYSQL Run phpmyadmin and create a schema called startups_dev
+3. MYSQL Run phpmyadmin and create a schema called startups_dev
 	
-			import a file called 'startups_dev.sql' then execute the file it will automatically generate the tables for the 			database
+			import a file called 'startups_dev.sql' then execute the file it will automatically generate the tables for the database
 		
-4.)	Now you need to create a dotenv file 
+4.	Now you need to create a dotenv file 
 			
-		i) In you project 
+		i. Project Dictory
 
-			*startups			
-				*aplication
-				*assets
-				*system
-				*tests
-				*vendor
-				*.editorconfig
-				*.env
-				*.gitignore
-				*.dotenv
-				*.htaccess
-				*.loadenv.php
-				*contrubuting.md 
-				*composer.json
-				*composer.lock
-				*index.php
-				*palette.pdf
-				*readme.rst 
-				*startups_dev.sql	
+		+-- startups			
+		|	+-- aplication
+		|	+-- assets
+		|   +-- system
+		|	+-- tests
+		|	+-- vendor
+		|	+-- .editorconfig
+		|	+-- .env
+		|	+-- .gitignore
+		|	+-- .dotenv
+		|	+-- .htaccess
+		|	+-- .loadenv.php
+		|	+-- contrubuting.md 
+		|	+-- composer.json
+		|	+-- composer.lock
+		|	+-- index.php
+		|	+-- palette.pdf
+		|	+-- readme.rst 
+		|	+-- startups_dev.sql	
 
-				Copy everything in ".dotenv" to ".env" and database name to match the DB on you phpadmin and credentials
+		Copy everything in _.dotenv_ to _.env_ and database name to match the DB on you *phpadmin* and credentials
 				
-				install dependencies using "composer i"
+		ii. install dependencies
+```bash 
+composer i
+```
 					
 			save and close
 			
-6.) Once you done restart WAMP or LAMP stack and in your browser type 'localhost/startup'
+5. Once you done restart WAMP or LAMP stack and in your browser type 'localhost/startup'
 		
 		If you followed all step carefully you should be running locally, if any errors pop please contact 
 		Prince Kudzai Maposa on the following contact details:

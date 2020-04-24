@@ -1,0 +1,9 @@
+ACTIVE_GROUP="development"
+DATABASE="startups"
+DATABASE_USER="root"
+DATABASE_PASSWORD="root"
+BASE_URL="http://localhost:81/startups"
+POSTGRES_HOST="localhost:5324"
+POSTGRES_DBNAME="startups"
+PAYNOW_INTEGRATION_ID=null
+PAYNOW_KEY=null

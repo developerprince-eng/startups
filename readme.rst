@@ -2,74 +2,68 @@
 Startups Platform
 ################
 
-Startups is a platform Desgined to enlist all Startups accross Zimbabwe and
+Startups is a platform Designed to enlist all Startups across Zimbabwe and
 its serves to act as an interface between investors and startups.
 The platform will support rich feature such as startup related news, market 
-performances for the startups and Guide to aid startups in seeking the investement 
+performances for the startups and Guide to aid startups in seeking the investment 
 of their choice.
 
 #####################################################
 How to Setup Locally on your machine for Development?
 #####################################################
 
-If you are a developer I suggest you use the following tools for developement:
+If you are a developer I suggest you use the following tools for development:
 
-Hosting: XAMPP
+Hosting: WAMP or LAMP
 Code editor: VSCODE (alternative phpstorm)
 Database: MYSQL, phpadmin (use mysqlworkbench as an additional optional tool)
 
 After obtaining these tools please makes sure you followig steps
-
-1.) Clone the repository to you local working directory 
-
-	'git clone https://github.com/Princr/startups.git'
 	
-	NB: Its a privtae repository so make sure you have credentials or use your credentials to clone
-	this only works if you are added as a contributor by the admininstrartor.
-	
-2.)Install and setup WAMP or LAMP using BITNAMI  
+1.)Install and setup WAMP or LAMP using BITNAMI  
 
 visit: https://bitnami.com/stacks
 
 Download the latest version and Install
 
-3.) After you have installed WAMP or LAMP configure your project to run on your WAMP (Apache and MySql) 
+2.) After you have installed WAMP or LAMP configure your project to run on your WAMP (Apache and MySql) 
 
-	i)   Clone the repository to you local working directory and working directory will be the htdocs file in apache2 server within your WAMP or LAMP
+	i)   Clone the repository to you local working directory and working directory will be the "htdocs" folder in apache2 server within your WAMP or LAMP
 
-		'git clone https://github.com/Princr/startups.git'
+		'git clone https://github.com/developerprince-eng/startups.git'
 		
-		NB: Its a privtae repository so make sure you have credentials or use your credentials to clone
-		this only works if you are added as a contributor by the admininstrartor.
+		NB: Its a private repository so make sure you have credentials or use your credentials to clone
+		this only works if you are added as a contributor by the administrator.
 			
 		save and close
 		
-4.) MYSQL Run phpmyadmin and create a schema called startups_dev
+3.) MYSQL Run phpmyadmin and create a schema called startups_dev
 	
 			import a file called 'startups_dev.sql' then execute the file it will automatically generate the tables for the 			database
 		
-5.)	Now you need to create a dotenv file 
+4.)	Now you need to create a dotenv file 
 			
 		i) In you project 
-						
-						*aplication
-						*assets
-						*system
-						*tests
-						*vendor
-						*.editorconfig
-						*.env
-						*.gitignore
-						*.dotenv
-						*.htaccess
-						*.loadenv.php
-						*contrubuting.md 
-						*composer.json
-						*composer.lock
-						*index.php
-						*palette.pdf
-						*readme.rst 
-						*startups_dev.sql	
+
+			*startups			
+				*aplication
+				*assets
+				*system
+				*tests
+				*vendor
+				*.editorconfig
+				*.env
+				*.gitignore
+				*.dotenv
+				*.htaccess
+				*.loadenv.php
+				*contrubuting.md 
+				*composer.json
+				*composer.lock
+				*index.php
+				*palette.pdf
+				*readme.rst 
+				*startups_dev.sql	
 
 				Copy everything in ".dotenv" to ".env" and database name to match the DB on you phpadmin and credentials
 				
@@ -77,7 +71,7 @@ Download the latest version and Install
 					
 			save and close
 			
-6.) Once you donw restart xampp and in your broswer type localhost/startup
+6.) Once you done restart WAMP or LAMP stack and in your browser type 'localhost/startup'
 		
 		If you followed all step carefully you should be running locally, if any errors pop please contact 
 		Prince Kudzai Maposa on the following contact details:
